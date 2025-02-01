@@ -1,9 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const controlNavbar = () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY < lastScrollY) {
+                // Scrolling up
+                setIsVisible(true);
+            } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                // Scrolling down and not at the top
+                setIsVisible(false);
+            }
+            
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', controlNavbar);
+
+        // Cleanup
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+    }, [lastScrollY]);
 
     const menuItems = [
         {
@@ -24,7 +49,9 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="bg-white shadow-lg fixed w-full z-50">
+        <nav className={`bg-white fixed w-full z-50 transition-transform duration-300 ${
+            isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}>
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between h-20">
                     <div className="flex-shrink-0 flex items-center">

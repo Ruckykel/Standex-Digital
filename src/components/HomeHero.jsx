@@ -29,10 +29,8 @@ const HomeHero = () => {
                             <span className="block mb-2 sm:mb-3 md:mb-5">Unleash The Power of The</span>
                             <span className="block">Microsoft Power Platform</span>
                         </h1>
-                        <p className="mt-5 max-w-md mx-auto text-base text-blue-100 sm:text-lg md:mt-9 md:text-xl md:max-w-3xl">
-                            Low Code, High Impact: Revolutionising Business Solutions for your Industry
-                        </p>
-                        <div className="mt-7 flex justify-center">
+                        
+                        <div className="mt-11 sm:mt-14 flex justify-center">
                             <div className="rounded-md shadow">
                                 <a
                                     href="#"
