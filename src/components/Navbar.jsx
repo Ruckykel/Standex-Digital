@@ -12,10 +12,8 @@ const Navbar = () => {
             const currentScrollY = window.scrollY;
             
             if (currentScrollY < lastScrollY) {
-                // Scrolling up
                 setIsVisible(true);
             } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
-                // Scrolling down and not at the top
                 setIsVisible(false);
             }
             
@@ -24,7 +22,6 @@ const Navbar = () => {
 
         window.addEventListener('scroll', controlNavbar);
 
-        // Cleanup
         return () => {
             window.removeEventListener('scroll', controlNavbar);
         };
@@ -69,23 +66,26 @@ const Navbar = () => {
                         {menuItems.map((item) => (
                             <div key={item.title} className="relative group">
                                 {item.items ? (
-                                    <div>
+                                    <div className="h-full">
                                         <button 
                                             className="flex items-center text-gray-800 group-hover:text-[#1ab188] px-3 py-2 rounded-md text-base font-medium"
                                         >
                                             {item.title}
                                             <ChevronDown className="ml-1 h-4 w-4" />
                                         </button>
-                                        <div className="hidden group-hover:block absolute w-60 bg-[#ffffff] border rounded-lg mt-2">
-                                            {item.items.map((subItem) => (
-                                                <a
-                                                    key={subItem.name}
-                                                    href={subItem.path}
-                                                    className="block px-6 py-3 text-base text-gray-800 hover:text-[#1ab188]"
-                                                >
-                                                    {subItem.name}
-                                                </a>
-                                            ))}
+                                        {/* Added padding-top for gap and increased specificity of hover */}
+                                        <div className="absolute w-60 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                            <div className="bg-white border rounded-lg shadow-lg">
+                                                {item.items.map((subItem) => (
+                                                    <a
+                                                        key={subItem.name}
+                                                        href={subItem.path}
+                                                        className="block px-6 py-3 text-base text-gray-800 hover:text-[#1ab188] hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg"
+                                                    >
+                                                        {subItem.name}
+                                                    </a>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 ) : (
