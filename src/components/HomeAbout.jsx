@@ -1,11 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Clock, Award } from 'lucide-react';
 
 const HomeAbout = () => {
   const [stats, setStats] = useState([
-    { title: "Increase in Efficiency", value: 0, target: 75, isPercentage: true },
-    { title: "Client Satisfaction Rate", value: 0, target: 95, isPercentage: true },
-    { title: "Hours Saved", value: 0, target: 80000, isPercentage: false }
+    { 
+      title: "Increase in Efficiency", 
+      value: 0, 
+      target: 75, 
+      isPercentage: true,
+      icon: TrendingUp,
+      color: "from-emerald-500 to-teal-600" 
+    },
+    { 
+      title: "Client Satisfaction Rate", 
+      value: 0, 
+      target: 95, 
+      isPercentage: true,
+      icon: Award,
+      color: "from-blue-500 to-indigo-600" 
+    },
+    { 
+      title: "Hours Saved", 
+      value: 0, 
+      target: 80000, 
+      isPercentage: false,
+      icon: Clock,
+      color: "from-purple-500 to-pink-600" 
+    }
   ]);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -93,19 +114,28 @@ const HomeAbout = () => {
           
           <div className="h-px bg-gray-200 w-full"></div>
           
-          <div className="space-y-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle2 className="w-6 h-6 text-emerald-500" />
-                <span className="text-lg">
-                  {stat.title} - <span className="font-bold text-2xl">
-                    {stat.isPercentage ? 
-                      `${stat.value}%` : 
-                      stat.value.toLocaleString()}
-                  </span>
-                </span>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="relative overflow-hidden bg-[#1e3a8a] text-white rounded-xl border border-gray-100 transition-colors duration-300">
+                  <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${stat.color}`}></div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-sm font-medium text-gray-200">{stat.title}</h3>
+                      <div className={`rounded-full p-2 bg-gradient-to-br ${stat.color} bg-opacity-10`}>
+                        <IconComponent className="w-5 h-5 text-white" />
+                      </div>
+                    </div>
+                    <div className="text-3xl font-bold">
+                      {stat.isPercentage ? 
+                        `${stat.value}%` : 
+                        stat.value.toLocaleString()}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

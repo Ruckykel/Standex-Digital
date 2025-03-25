@@ -30,19 +30,20 @@ const Navbar = () => {
     const menuItems = [
         {
             title: 'Services',
-            path: '/services',
+            href: '/services',
             items: [
-                { name: 'Microsoft Power Platform', path: '/services/power-platform' },
-                { name: 'Power Apps', path: '/services/power-apps' },
-                { name: 'Power Automate', path: '/services/power-automate' },
-                { name: 'Power BI', path: '/services/power-bi' },
-                { name: 'Power Pages', path: '/services/power-pages' },
-                { name: 'Copilot Studio', path: '/services/copilot-studio' },
+                { name: 'Microsoft Power Platform', href: '/PowerPlatform' },
+                { name: 'Power Apps', href: '/services/power-apps' },
+                { name: 'Power Automate', href: '/services/power-automate' },
+                { name: 'Power BI', href: '/services/power-bi' },
+                { name: 'Power Pages', href: '/services/power-pages' },
+                { name: 'Copilot Studio', href: '/services/copilot-studio' },
             ]
         },
-        { title: 'About', path: '#' },
-        { title: 'Tech Elevate', path: '#' },
-        { title: 'Events', path: '#' }, 
+        { title: 'About', href: '#' },
+        { title: 'Tech Elevate', href: '#' },
+        { title: 'Events', href: '#' },
+        { title: 'Blog', href: '#' },
     ];
 
     return (
@@ -67,19 +68,20 @@ const Navbar = () => {
                             <div key={item.title} className="relative group">
                                 {item.items ? (
                                     <div className="h-full">
-                                        <button 
+                                        <a 
+                                            href={item.href}
                                             className="flex items-center text-gray-800 group-hover:text-[#1ab188] px-3 py-2 rounded-md text-base font-medium"
                                         >
                                             {item.title}
                                             <ChevronDown className="ml-1 h-4 w-4" />
-                                        </button>
+                                        </a>
                                         {/* Added padding-top for gap and increased specificity of hover */}
                                         <div className="absolute w-60 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                                             <div className="bg-white border rounded-lg shadow-lg">
                                                 {item.items.map((subItem) => (
                                                     <a
                                                         key={subItem.name}
-                                                        href={subItem.path}
+                                                        href={subItem.href}
                                                         className="block px-6 py-3 text-base text-gray-800 hover:text-[#1ab188] hover:bg-gray-50 first:rounded-t-lg last:rounded-b-lg"
                                                     >
                                                         {subItem.name}
@@ -90,7 +92,7 @@ const Navbar = () => {
                                     </div>
                                 ) : (
                                     <a
-                                        href={item.path}
+                                        href={item.href}
                                         className="text-gray-800 hover:text-[#1ab188] px-3 py-2 rounded-md text-base font-medium"
                                     >
                                         {item.title}
@@ -138,7 +140,7 @@ const Navbar = () => {
                                             {item.items.map((subItem) => (
                                                 <a
                                                     key={subItem.name}
-                                                    href={subItem.path}
+                                                    href={subItem.href}
                                                     className="block px-6 py-2 text-sm text-gray-700 hover:text-[#1ab188]"
                                                 >
                                                     {subItem.name}
@@ -149,7 +151,7 @@ const Navbar = () => {
                                 </div>
                             ) : (
                                 <a
-                                    href={item.path}
+                                    href={item.href}
                                     className="block px-4 py-2 text-base font-medium text-gray-800 hover:text-[#1ab188]"
                                 >
                                     {item.title}
