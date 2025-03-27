@@ -43,7 +43,7 @@ const Navbar = () => {
         },
         { title: 'Services', href: '/Services' },
         { title: 'About', href: '#' },
-        { title: 'Tech Elevate', href: '#' },
+        { title: 'Training', href: '#' },
         { title: 'Events', href: '#' },
         { title: 'Blog', href: '#' },
     ];
