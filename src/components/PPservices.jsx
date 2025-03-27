@@ -22,7 +22,7 @@ const PPservices = () => {
           <p className="text-slate-700 mb-6 flex-grow">
             Transform your business with cost-effective, custom applications that are fully responsive across all your platforms and devices.
           </p>
-          <a href="#" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
+          <a href="/PowerApps" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
             Explore Power Apps Services
           </a>
         </div>
@@ -36,7 +36,7 @@ const PPservices = () => {
           <p className="text-slate-700 mb-6 flex-grow">
             Save time, reduce costs, and increase your business efficiency by automating repetitive and manual processes.
           </p>
-          <a href="#" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
+          <a href="/PowerAutomate" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
             Explore Power Automate Services
           </a>
         </div>
@@ -50,7 +50,7 @@ const PPservices = () => {
           <p className="text-slate-700 mb-6 flex-grow">
             Visualise your raw data in custom dashboards and insightful reports and make decisions based on real-time data.
           </p>
-          <a href="#" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
+          <a href="/PowerBi" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
             Explore Power BI Services
           </a>
         </div>
@@ -64,7 +64,7 @@ const PPservices = () => {
           <p className="text-slate-700 mb-6 flex-grow">
             Enhance engagement, streamline operations, and provide easy access to your services with interactive web portals and websites.
           </p>
-          <a href="#" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
+          <a href="/PowerPages" className="text-[#0C2340] font-medium hover:text-purple-700 transition-colors">
             Explore Power Pages Services
           </a>
         </div>

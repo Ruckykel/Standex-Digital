@@ -28,18 +28,20 @@ const Navbar = () => {
     }, [lastScrollY]);
 
     const menuItems = [
+        { title: 'Home', href: '/' },
         {
-            title: 'Services',
-            href: '/services',
+            title: 'Power Platform',
+            href: '/PowerPlatform',
             items: [
                 { name: 'Microsoft Power Platform', href: '/PowerPlatform' },
-                { name: 'Power Apps', href: '/services/power-apps' },
-                { name: 'Power Automate', href: '/services/power-automate' },
-                { name: 'Power BI', href: '/services/power-bi' },
-                { name: 'Power Pages', href: '/services/power-pages' },
-                { name: 'Copilot Studio', href: '/services/copilot-studio' },
+                { name: 'Power Apps', href: '/PowerApps' },
+                { name: 'Power Automate', href: '/PowerAutomate' },
+                { name: 'Power BI', href: '/PowerBi' },
+                { name: 'Power Pages', href: '/PowerPages' },
+                { name: 'Copilot Studio', href: 'CopilotStudio' },
             ]
         },
+        { title: 'Services', href: '/Services' },
         { title: 'About', href: '#' },
         { title: 'Tech Elevate', href: '#' },
         { title: 'Events', href: '#' },

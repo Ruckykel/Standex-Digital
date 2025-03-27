@@ -32,7 +32,7 @@ const PPabout = () => {
               on third-party tools, and manual migrations.
             </p>
             
-            <a href="#">
+            <a href="/MicrosoftPowerPlatform">
               <button className="bg-[#0C2340] text-white py-3 px-6 rounded-md font-medium flex items-center transition-all hover:bg-[#0E3060]">
                 Find Out More
                 <svg className="ml-2 w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

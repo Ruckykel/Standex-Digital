@@ -13,7 +13,6 @@ const PowerPlatform = () => {
       <Navbar />
       <PPabout />
       <PPservices />
-      <TechSolutions />
       <PPdiscovery />
       <Testimonials />
       <Connect />
