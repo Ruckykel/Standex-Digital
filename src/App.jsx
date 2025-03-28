@@ -7,6 +7,10 @@ import PowerBi from './components/PowerBi';
 import PowerPages from './components/PowerPages';
 import MicrosoftPowerPlatform from './components/MicrosoftPowerPlatform';
 import Services from './components/Services';
+import CopilotStudio from './components/CopilotStudio';
+import About from './components/About';
+import Training from './components/Training';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
         <Route path="/PowerPages" element={<PowerPages />} />
         <Route path="/MicrosoftPowerPlatform" element={<MicrosoftPowerPlatform />} />
         <Route path="/Services" element={<Services />} />
+        <Route path="/CopilotStudio" element={<CopilotStudio />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Training" element={<Training />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </Router>
   );

@@ -31,12 +31,12 @@ const TechSolutions = () => {
               Comprehensive cloud architecture and migration services designed to optimize your infrastructure, enhance security, and enable scalable growth for your business.
             </p>
             
-            <a href="#" className="text-blue-600 font-medium hover:text-blue-800">
+            <a href="/Services#intelligentCloudSolutions" className="text-blue-600 font-medium hover:text-blue-800">
               Learn more
             </a>
           </div>
           
-          {/* Web Development */}
+          {/* Web & App Development */}
           <div className="bg-white rounded-lg shadow-md p-8">
             <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-lg mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-600">
@@ -45,35 +45,14 @@ const TechSolutions = () => {
             </div>
             
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Web Development
+              Web & App Development
             </h3>
             
             <p className="text-gray-600 mb-6">
-              Custom website development with responsive design, ensuring optimal user experience across all devices and platforms while meeting your business objectives.
+              Custom website and mobile application development with responsive design, creating seamless digital experiences across all devices and platforms to engage users and drive your business forward.
             </p>
             
-            <a href="#" className="text-blue-600 font-medium hover:text-blue-800">
-              Learn more
-            </a>
-          </div>
-          
-          {/* App Development */}
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-lg mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-600">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              App Development
-            </h3>
-            
-            <p className="text-gray-600 mb-6">
-              Innovative mobile application development for iOS and Android platforms, creating seamless digital experiences that engage users and drive your business forward.
-            </p>
-            
-            <a href="#" className="text-blue-600 font-medium hover:text-blue-800">
+            <a href="/Services#webAndAppDevelopment" className="text-blue-600 font-medium hover:text-blue-800">
               Learn more
             </a>
           </div>
@@ -95,12 +74,12 @@ const TechSolutions = () => {
               Results-driven digital marketing strategies including SEO, content marketing, and social media campaigns to increase visibility and generate qualified leads.
             </p>
             
-            <a href="#" className="text-blue-600 font-medium hover:text-blue-800">
+            <a href="/Services#digitalMarketing" className="text-blue-600 font-medium hover:text-blue-800">
               Learn more
             </a>
           </div>
           
-          {/* Artificial Intelligence */}
+          {/* AI Architecture & Development */}
           <div className="bg-white rounded-lg shadow-md p-8">
             <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-lg mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-600">
@@ -109,14 +88,14 @@ const TechSolutions = () => {
             </div>
             
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Artificial Intelligence
+              AI Architecture & Development
             </h3>
             
             <p className="text-gray-600 mb-6">
               Cutting-edge AI solutions that automate processes, extract valuable insights from data, and create intelligent applications to transform your business operations.
             </p>
             
-            <a href="#" className="text-blue-600 font-medium hover:text-blue-800">
+            <a href="/Services#aiArchitectureAndDevelopment" className="text-blue-600 font-medium hover:text-blue-800">
               Learn more
             </a>
           </div>
@@ -137,7 +116,28 @@ const TechSolutions = () => {
               End-to-end e-commerce solutions with secure payment processing, inventory management, and personalized shopping experiences that increase conversions and customer loyalty.
             </p>
             
-            <a href="#" className="text-blue-600 font-medium hover:text-blue-800">
+            <a href="/Services#eCommerceSolutions" className="text-blue-600 font-medium hover:text-blue-800">
+              Learn more
+            </a>
+          </div>
+          
+          {/* Tech Elevate */}
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-lg mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-blue-600">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              Tech Elevate – Industry-Leading Training & Certification
+            </h3>
+            
+            <p className="text-gray-600 mb-6">
+              Comprehensive training programs and certification paths designed to upskill your workforce with cutting-edge technology knowledge and practical expertise to drive innovation.
+            </p>
+            
+            <a href="/Services#techElevate" className="text-blue-600 font-medium hover:text-blue-800">
               Learn more
             </a>
           </div>
@@ -145,7 +145,7 @@ const TechSolutions = () => {
         
         {/* Discover More Button */}
         <div className="text-center">
-          <a href="#" className="inline-block px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+          <a href="/Services" className="inline-block px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
             Discover More
           </a>
         </div>

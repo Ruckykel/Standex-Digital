@@ -1,4 +1,3 @@
-import BlogPost from './BlogPost'
 import Connect from './Connect'
 import Footer from './Footer'
 import HomeAbout from './HomeAbout'
@@ -19,7 +18,6 @@ const Home = () => {
       <TechSolutions />
       <WhyChooseUs />
       <Testimonials />
-      <BlogPost />
       <Connect />
       <Footer />
     </div>

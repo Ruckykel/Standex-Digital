@@ -1,6 +1,18 @@
 import React from 'react';
 
 const TableOfContents = () => {
+  // Add smooth scroll function
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto py-12 px-4">
       {/* Table of Contents Header */}
@@ -10,30 +22,30 @@ const TableOfContents = () => {
       <div className="mb-12">
         <ol className="list-decimal list-inside space-y-2 text-lg text-[#0C2340]">
           <li className="font-medium">
-            <a href="#components" className="hover:text-blue-700">Components Of The Power Platform</a>
+            <a href="#components" onClick={(e) => scrollToSection(e, 'components')} className="hover:text-blue-700">Components Of The Power Platform</a>
             <ol className="list-decimal list-inside ml-8 space-y-2 mt-2">
               <li className="text-base">
-                <a href="#power-bi" className="hover:text-blue-700">Power BI</a>
+                <a href="#power-bi" onClick={(e) => scrollToSection(e, 'power-bi')} className="hover:text-blue-700">Power BI</a>
               </li>
               <li className="text-base">
-                <a href="#power-apps" className="hover:text-blue-700">Power Apps</a>
+                <a href="#power-apps" onClick={(e) => scrollToSection(e, 'power-apps')} className="hover:text-blue-700">Power Apps</a>
               </li>
               <li className="text-base">
-                <a href="#power-automate" className="hover:text-blue-700">Power Automate</a>
+                <a href="#power-automate" onClick={(e) => scrollToSection(e, 'power-automate')} className="hover:text-blue-700">Power Automate</a>
               </li>
               <li className="text-base">
-                <a href="#power-pages" className="hover:text-blue-700">Power Pages</a>
+                <a href="#power-pages" onClick={(e) => scrollToSection(e, 'power-pages')} className="hover:text-blue-700">Power Pages</a>
               </li>
             </ol>
           </li>
           <li className="font-medium mt-4">
-            <a href="#key-features" className="hover:text-blue-700">Key Features Of The Power Platform</a>
+            <a href="#key-features" onClick={(e) => scrollToSection(e, 'key-features')} className="hover:text-blue-700">Key Features Of The Power Platform</a>
           </li>
           <li className="font-medium">
-            <a href="#benefits" className="hover:text-blue-700">Benefits Of The Power Platform</a>
+            <a href="#benefits" onClick={(e) => scrollToSection(e, 'benefits')} className="hover:text-blue-700">Benefits Of The Power Platform</a>
           </li>
           <li className="font-medium">
-            <a href="#conclusion" className="hover:text-blue-700">Conclusion</a>
+            <a href="#conclusion" onClick={(e) => scrollToSection(e, 'conclusion')} className="hover:text-blue-700">Conclusion</a>
           </li>
         </ol>
       </div>
@@ -42,7 +54,7 @@ const TableOfContents = () => {
       <div className="text-lg text-slate-700 mb-12">
         <p className="mb-4">
           Microsoft Power Platform is a suite of low-code business solutions/tools developed by Microsoft to help
-          businesses <a href="#automate" className="text-blue-700 font-medium">automate processes</a>, <a href="#analyse" className="text-blue-700 font-medium">analyse data</a>, and <a href="#develop" className="text-blue-700 font-medium">develop custom applications</a>. Businesses can streamline
+          businesses <a href="#automate" onClick={(e) => scrollToSection(e, 'automate')} className="text-blue-700 font-medium">automate processes</a>, <a href="#analyse" onClick={(e) => scrollToSection(e, 'analyse')} className="text-blue-700 font-medium">analyse data</a>, and <a href="#develop" onClick={(e) => scrollToSection(e, 'develop')} className="text-blue-700 font-medium">develop custom applications</a>. Businesses can streamline
           their operations using the Power Platform, to reduce manual labour, enhance data-driven decision-making, and
           accelerate business growth.
         </p>

@@ -38,12 +38,12 @@ const Navbar = () => {
                 { name: 'Power Automate', href: '/PowerAutomate' },
                 { name: 'Power BI', href: '/PowerBi' },
                 { name: 'Power Pages', href: '/PowerPages' },
-                { name: 'Copilot Studio', href: 'CopilotStudio' },
+                { name: 'Copilot Studio', href: '/CopilotStudio' },
             ]
         },
         { title: 'Services', href: '/Services' },
-        { title: 'About', href: '#' },
-        { title: 'Training', href: '#' },
+        { title: 'About', href: '/About' },
+        { title: 'Training', href: '/Training' },
         { title: 'Events', href: '#' },
         { title: 'Blog', href: '#' },
     ];
@@ -104,7 +104,7 @@ const Navbar = () => {
                         ))}
                         {/* Contact Us Button */}
                         <a
-                            href="/contact"
+                            href="/Contact"
                             className="bg-[#1ab188] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#007B5A] transition-colors"
                         >
                             Contact Us
@@ -164,7 +164,7 @@ const Navbar = () => {
                     {/* Mobile Contact Us Button */}
                     <div className="px-4 py-3">
                         <a
-                            href="/contact"
+                            href="/Contact"
                             className="block w-full text-center bg-[#1ab188] text-white px-4 py-2 rounded-md text-base font-medium hover:bg-[#007B5A] transition-colors"
                         >
                             Contact Us
