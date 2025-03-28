@@ -38,7 +38,7 @@ const WhatIsMPowerPages = () => {
         <div className="flex justify-center">
           <div className="rounded-lg overflow-hidden shadow-xl">
             <img 
-              src="/api/placeholder/800/600" 
+              src="/Power-Pages.webp" 
               alt="Person working on Microsoft Power Pages" 
               className="w-full h-auto object-cover"
             />

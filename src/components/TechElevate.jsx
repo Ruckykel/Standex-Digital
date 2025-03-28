@@ -16,7 +16,7 @@ const TechElevate = () => {
         {/* Tech Elevate Banner */}
         <div className="mb-12 rounded-lg overflow-hidden">
           <img 
-            src="/images/tech-elevate-banner.jpg" 
+            src="/DataIntelligenceLarge.png" 
             alt="Technology training and certification" 
             className="w-full h-auto object-cover"
           />

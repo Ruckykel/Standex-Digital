@@ -47,7 +47,7 @@ const PowerBiHelp = () => {
         <div className="bg-white rounded-lg shadow-sm p-6">
           <div className="rounded overflow-hidden">
             <img 
-              src="/api/placeholder/1200/400" 
+              src="/Power-BI-Help.webp" 
               alt="Power BI Dashboard Example" 
               className="w-full h-auto object-cover"
             />

@@ -14,7 +14,7 @@ const TrainingConnect = () => {
           <div className="md:w-1/2">
             <div className="w-full max-w-md mx-auto">
               <img 
-                src="/images/hands-phone.jpg" 
+                src="/ConnectImage1.svg" 
                 alt="Person using mobile phone" 
                 className="w-full h-auto"
               />

@@ -34,7 +34,7 @@ const WhatIsPowerBi = () => {
           <div className="lg:w-1/2">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="/api/placeholder/1200/800" 
+                src="/Power-Bi.webp" 
                 alt="Power BI Dashboard Example" 
                 className="w-full h-auto object-cover"
               />

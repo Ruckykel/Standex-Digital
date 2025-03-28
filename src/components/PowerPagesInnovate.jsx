@@ -17,7 +17,7 @@ const PowerPagesInnovate = () => {
           
           <div className="rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/api/placeholder/600/400" 
+              src="/Power-Pages-Innovate.webp" 
               alt="Person analyzing data on computer" 
               className="w-full h-auto object-cover"
             />

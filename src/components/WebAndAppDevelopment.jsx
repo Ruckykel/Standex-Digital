@@ -16,7 +16,7 @@ const WebAndAppDevelopment = () => {
         {/* Web & App Development Banner */}
         <div className="mb-12 rounded-lg overflow-hidden">
           <img 
-            src="/images/web-app-development-banner.jpg" 
+            src="/DataIntelligenceLarge.png" 
             alt="Web and mobile application development visualization" 
             className="w-full h-auto object-cover"
           />

@@ -27,7 +27,7 @@ const WhatIsCopilot = () => {
           <div className="mt-6 lg:mt-0">
             <div className="relative">
               <img 
-                src="/api/placeholder/800/600" 
+                src="/Copilot.webp" 
                 alt="Person using laptop with AI chatbot interface" 
                 className="rounded-lg shadow-lg w-full"
               />

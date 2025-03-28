@@ -12,17 +12,17 @@ const AboutWhyChooseUs = () => {
   const features = [
     {
       title: "Experienced",
-      image: "/api/placeholder/400/300",
+      image: "/Experienced.webp",
       description: "With extensive consulting experience, we've perfected our services and solutions. We've worked with global FS customers and countless FTSE100 companies. We understand what good PMO is and know exactly how to implement and adjust your processes to see results."
     },
     {
       title: "Innovative",
-      image: "/api/placeholder/400/300",
+      image: "/Innovative.webp",
       description: "We understand that one solution can not fix every problem which is why we offer a free consultation call to our clients to better understand your needs and challenges. We'll advise you on recommendations, and how much you can save by using our solutions."
     },
     {
       title: "Trustworthy",
-      image: "/api/placeholder/400/300",
+      image: "/Trustworthy.webp",
       description: "We provide honest and open advice based on what solution would be best for you. Our dedication to transparency, integrity, and ethical practices in every project ensures that you can confidently rely on us for expert guidance and dependable solutions."
     }
   ];

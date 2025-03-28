@@ -67,78 +67,20 @@ const WhatIsMPA = () => {
               automating manual and repetitive tasks, or connect to thousands of customers externally 
               with your data via a login portal, Power Apps can provide the solution.
             </p>
-            
-            
           </div>
           
-          {/* Right illustration section */}
-          <div className="lg:w-1/2 relative">
-            {/* Power Apps logo */}
-            <div className="absolute top-0 right-0 lg:-top-10 lg:right-0">
-              <div className="flex flex-col items-center">
-                <div className="w-20 h-20 bg-purple-600 rounded-md transform rotate-45 relative">
-                  <div className="w-16 h-16 bg-pink-400 rounded-md absolute top-4 left-4"></div>
-                </div>
-                <p className="text-purple-700 font-bold text-2xl mt-4">Power Apps</p>
-              </div>
-            </div>
-            
-            {/* Main illustration */}
-            <div className="mt-16 relative">
-              {/* Phone/tablet frame */}
-              <div className="bg-gray-200 rounded-3xl p-4 w-64 h-96 mx-auto relative">
-                {/* Purple top edge */}
-                <div className="absolute top-0 left-0 right-0 h-4 bg-purple-600 rounded-t-3xl"></div>
-                
-                {/* Person illustration */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-                  <div className="relative">
-                    {/* Body */}
-                    <div className="w-32 h-48 relative">
-                      {/* Orange shirt */}
-                      <div className="absolute top-0 w-32 h-24 bg-orange-500 rounded-t-lg"></div>
-                      
-                      {/* Blue pants */}
-                      <div className="absolute bottom-0 w-32 h-32 bg-blue-900"></div>
-                      
-                      {/* Head */}
-                      <div className="absolute top-0 right-8 w-16 h-16 bg-gray-100 rounded-full"></div>
-                      
-                      {/* Arm */}
-                      <div className="absolute top-12 right-4 w-20 h-6 bg-orange-500 rounded-full transform rotate-45"></div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* App icons floating around */}
-                <div className="absolute top-12 left-4">
-                  <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center">
-                    <div className="w-6 h-6 bg-purple-600"></div>
-                  </div>
-                </div>
-                
-                <div className="absolute top-16 right-8">
-                  <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center">
-                    <div className="w-6 h-4 bg-purple-600"></div>
-                  </div>
-                </div>
-                
-                <div className="absolute top-36 right-0">
-                  <div className="w-12 h-10 bg-white rounded-md flex items-center justify-center">
-                    <div className="w-8 h-5 bg-blue-500"></div>
-                  </div>
-                </div>
-                
-                <div className="absolute bottom-24 left-2">
-                  <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center">
-                    <div className="w-6 h-6 bg-purple-600 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Dotted line connecting various elements */}
-              <div className="absolute -bottom-8 -right-12 w-32 h-32 border-4 border-dashed border-purple-300 rounded-full border-t-0 border-l-0"></div>
-              <div className="absolute -top-4 -left-10 w-24 h-24 border-4 border-dashed border-purple-300 rounded-full border-b-0 border-r-0"></div>
+          {/* Right image section */}
+          <div className="lg:w-1/2 flex justify-center">
+            <div className="w-full max-w-md h-auto  overflow-hidden">
+              <img 
+                src="/Power-apps.webp" 
+                alt="Microsoft Power Apps interface on mobile and desktop" 
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "https://via.placeholder.com/500x400?text=Power+Apps+Image";
+                }}
+              />
             </div>
           </div>
         </div>

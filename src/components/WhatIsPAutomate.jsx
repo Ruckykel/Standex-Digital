@@ -39,7 +39,7 @@ const WhatIsPAutomate = () => {
           {/* Right Column - Image */}
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/api/placeholder/800/600" 
+              src="/Power-Automate.webp" 
               alt="Person looking at Power Automate workflow diagram" 
               className="w-full h-auto rounded-lg" 
             />

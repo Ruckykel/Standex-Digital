@@ -18,7 +18,7 @@ const CopilotHelp = () => {
             
             <div className="mt-6">
               <img 
-                src="/api/placeholder/800/500" 
+                src="/Copilot-Help.webp" 
                 alt="Data center with blue digital visualization" 
                 className="rounded-lg shadow-lg w-full"
               />

@@ -6,19 +6,19 @@ const TrainingCourses = () => {
       id: 'cloud-ai',
       title: 'Cloud Engineering, AI & DevOps',
       description: 'Master the fundamentals of cloud architecture, artificial intelligence, and DevOps principles. Learn to design, deploy, and manage scalable cloud solutions while implementing AI technologies and streamlining workflows.',
-      image: '/images/cloud-ai-devops-flyer.jpg',
+      image: '/CloudCourse.svg',
     },
     {
       id: 'power-platform',
       title: 'Power Platform: Low Code - No Code',
       description: 'Discover how to build professional applications without traditional coding. Learn to use Microsoft Power Platform to create efficient solutions using low-code and no-code development approaches.',
-      image: '/images/power-platform-flyer.jpg',
+      image: '/PowerPlatformCourse.svg',
     },
     {
       id: 'business-intelligence',
       title: 'Business Intelligence',
       description: 'Transform raw data into meaningful insights. Learn to use BI tools to create powerful visualizations, reports, and dashboards that drive informed business decisions.',
-      image: '/images/business-intelligence-flyer.jpg',
+      image: '/BusinessIntelligenceCourse.svg',
     }
   ];
 

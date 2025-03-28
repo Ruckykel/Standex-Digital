@@ -44,7 +44,7 @@ const AutomateSolutions = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-4xl rounded-lg overflow-hidden shadow-lg">
             <img 
-              src="/api/placeholder/1200/600" 
+              src="/Power-Automate-Solutions.webp" 
               alt="Power Automate Travel Approval Dashboard Example" 
               className="w-full h-auto"
             />

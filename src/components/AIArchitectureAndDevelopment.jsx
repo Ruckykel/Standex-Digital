@@ -16,7 +16,7 @@ const AIArchitectureAndDevelopment = () => {
         {/* AI Architecture Banner */}
         <div className="mb-12 rounded-lg overflow-hidden">
           <img 
-            src="/images/ai-architecture-banner.jpg" 
+            src="/DataIntelligenceLarge.png" 
             alt="AI architecture and development visualization" 
             className="w-full h-auto object-cover"
           />

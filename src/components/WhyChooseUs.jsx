@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
         {/* Microsoft Partner Logo Card */}
         <div className="bg-white rounded-lg p-6 mb-8 w-full max-w-sm">
           <img 
-            src="/microsoft-solutions-partner-logo.png" 
+            src="/Microsoft-Solution-Partner-300x183.webp" 
             alt="Microsoft Solutions Partner" 
             className="h-12 mb-6"
           />
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
       {/* Right Section - Image */}
       <div className="w-full md:w-1/2 h-full min-h-[500px]">
         <img 
-          src="/presentation-image.jpg" 
+          src="/Woman-consulting.webp" 
           alt="Digital presentation with team" 
           className="w-full h-full object-cover"
         />

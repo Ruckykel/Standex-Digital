@@ -16,7 +16,7 @@ const IntelligentCloudSolutions = () => {
         {/* Cloud Image Banner */}
         <div className="mb-12 rounded-lg overflow-hidden">
           <img 
-            src="/images/cloud-solutions-banner.jpg" 
+            src="/DataIntelligenceLarge.png" 
             alt="Cloud computing infrastructure visualization" 
             className="w-full h-auto object-cover"
           />
