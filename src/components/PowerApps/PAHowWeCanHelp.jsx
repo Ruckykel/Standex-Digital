@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const PAHowWeCanHelp = () => {
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const sectionRef = useRef(null);
+  
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        setAnimationStarted(true);
+      }
+    };
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15,
+    });
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   // Function to handle smooth scrolling to contact form
   const scrollToContactForm = () => {
     const contactFormElement = document.getElementById('contact-form');
@@ -54,14 +82,28 @@ const PAHowWeCanHelp = () => {
   ];
 
   return (
-    <div className="py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
+    <div className="w-full bg-gray-900 py-16 px-4">
+      <div ref={sectionRef} className="max-w-6xl mx-auto text-center">
         {/* Section Header */}
-        <p className="text-purple-700 mb-2">How We Can Help</p>
-        <h2 className="text-4xl font-bold text-slate-800 mb-4">
+        <p 
+          className={`text-[#049DCB] mb-2 font-medium transform transition-all duration-700 ${
+            animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
+          How We Can Help
+        </p>
+        <h2 
+          className={`text-4xl font-bold text-white mb-4 transform transition-all duration-700 delay-100 ${
+            animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
           Choose The Right Service For<br />Your Business
         </h2>
-        <p className="text-slate-600 max-w-3xl mx-auto mb-12">
+        <p 
+          className={`text-gray-300 max-w-3xl mx-auto mb-12 transform transition-all duration-700 delay-200 ${
+            animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
           Our team is dedicated to customising app solutions that fit your unique business 
           needs, ensuring a smarter, faster, and more efficient way of working.
         </p>
@@ -71,32 +113,59 @@ const PAHowWeCanHelp = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col h-full"
+              className={`bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-md flex flex-col h-full transition-all duration-500 transform hover:-translate-y-1 hover:shadow-lg hover:border-[#2EC743] ${
+                animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}
+              style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               {/* Icon Circle */}
-              <div className="mb-4 self-center">
-                <div className="w-16 h-16 rounded-full bg-blue-900 text-white flex items-center justify-center">
+              <div 
+                className="mb-4 self-center"
+                style={{ 
+                  animation: animationStarted ? 'float 3s ease-in-out infinite' : 'none',
+                  animationDelay: `${index * 0.5}s`
+                }}
+              >
+                <div className="w-16 h-16 rounded-full bg-gray-700 text-[#049DCB] flex items-center justify-center">
                   {service.icon}
                 </div>
               </div>
               
               {/* Service Title */}
-              <h3 className="text-xl font-bold text-blue-900 mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
               
               {/* Service Description */}
-              <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
+              <p className="text-gray-300 mb-6 flex-grow">{service.description}</p>
               
               {/* Link */}
               <button 
                 onClick={scrollToContactForm}
-                className="text-blue-600 hover:text-blue-800 font-medium mt-auto"
+                className="text-[#2EC743] hover:text-[#049DCB] font-medium mt-auto transition-all duration-300 flex items-center justify-center gap-2"
               >
                 {service.linkText}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
               </button>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Animation keyframes */}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      `}</style>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import Connect from './Connect'
 import Footer from './Footer'
-import HomeAbout from './HomeAbout'
-import HomeHero from './HomeHero'
-import HomeServices from './HomeServices'
+import HomeAbout from './Home/HomeAbout'
+import HomeHero from './Home/HomeHero'
+import HomeServices from './Home/HomeServices'
 import Navbar from './Navbar'
-import TechSolutions from './TechSolutions'
+import TechSolutions from './Home/TechSolutions'
 import Testimonials from './Testimonials'
-import WhyChooseUs from './WhyChooseUs'
+import WhyChooseUs from './Home/WhyChooseUs'
 
 const Home = () => {
   return (

@@ -1,11 +1,10 @@
-import PPabout from "./PPabout"
+import PPabout from "./PowerPlatform/PPabout"
 import Navbar from './Navbar'
 import Footer from './Footer'
-import PPservices from "./PPservices"
-import TechSolutions from "./TechSolutions"
+import PPservices from "./PowerPlatform/PPservices"
 import Testimonials from "./Testimonials"
 import Connect from "./Connect"
-import PPdiscovery from "./PPdiscovery"
+import PPdiscovery from "./PowerPlatform/PPdiscovery"
 
 const PowerPlatform = () => {
   return (

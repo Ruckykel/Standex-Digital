@@ -1,12 +1,12 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Connect from "./Connect"
-import CopilotHeader from './CopilotHeader'
-import WhatIsCopilot from './WhatIsCopilot'
-import CopilotHelp from './CopilotHelp'
-import CopilotSolutions from './CopilotSolutions'
-import CopilotAbility from './CopilotAbility'
-import CopilotProcess from './CopilotProcess'
+import CopilotHeader from './CopilotStudio/CopilotHeader'
+import WhatIsCopilot from './CopilotStudio/WhatIsCopilot'
+import CopilotHelp from './CopilotStudio/CopilotHelp'
+import CopilotSolutions from './CopilotStudio/CopilotSolutions'
+import CopilotAbility from './CopilotStudio/CopilotAbility'
+import CopilotProcess from './CopilotStudio/CopilotProcess'
 
 
 const CopilotStudio = () => {

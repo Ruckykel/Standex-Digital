@@ -1,12 +1,12 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Connect from './Connect'
-import PowerAppsHeader from './PowerAppsHeader'
-import WhatIsMPA from './WhatIsMPA'
-import PASolutions from './PASolutions'
-import PAHowWeCanHelp from './PAHowWeCanHelp'
-import PAAbility from './PAAbility'
-import PAProcess from './PAProcess'
+import PowerAppsHeader from './PowerApps/PowerAppsHeader'
+import WhatIsMPA from './PowerApps/WhatIsMPA'
+import PASolutions from './PowerApps/PASolutions'
+import PAHowWeCanHelp from './PowerApps/PAHowWeCanHelp'
+import PAAbility from './PowerApps/PAAbility'
+import PAProcess from './PowerApps/PAProcess'
 
 
 const PowerApps = () => {

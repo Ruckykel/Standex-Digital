@@ -1,14 +1,14 @@
-import AIArchitectureAndDevelopment from './AIArchitectureAndDevelopment'
+import AIArchitectureAndDevelopment from './Services/AIArchitectureAndDevelopment'
 import Connect from './Connect'
-import DigitalMarketing from './DigitalMarketing'
-import ECommerceSolutions from './ECommerceSolutions'
+import DigitalMarketing from './Services/DigitalMarketing'
+import ECommerceSolutions from './Services/ECommerceSolutions'
 import Footer from './Footer'
-import IntelligentCloudSolutions from './IntelligentCloudSolutions'
+import IntelligentCloudSolutions from './Services/IntelligentCloudSolutions'
 import Navbar from './Navbar'
-import ServicesDiscovery from './ServicesDiscovery'
-import ServicesHeader from './ServicesHeader'
-import TechElevate from './TechElevate'
-import WebAndAppDevelopment from './WebAndAppDevelopment'
+import ServicesDiscovery from './Services/ServicesDiscovery'
+import ServicesHeader from './Services/ServicesHeader'
+import TechElevate from './Services/TechElevate'
+import WebAndAppDevelopment from './Services/WebAndAppDevelopment'
 
 
 const Services = () => {

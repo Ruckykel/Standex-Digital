@@ -1,6 +1,6 @@
 import Connect from './Connect'
-import ContactHeader from './ContactHeader'
-import ContactLocation from './ContactLocation'
+import ContactHeader from './Contact/ContactHeader'
+import ContactLocation from './Contact/ContactLocation'
 import Footer from './Footer'
 import Navbar from './Navbar'
 

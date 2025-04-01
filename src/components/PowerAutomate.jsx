@@ -1,11 +1,11 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Connect from './Connect'
-import AutomateHeader from './AutomateHeader'
-import WhatIsPAutomate from './WhatIsPAutomate'
-import AutomateServices from './AutomateServices'
-import AutomateSolutions from './AutomateSolutions'
-import AutomateAbility from './AutomateAbility'
+import AutomateHeader from './PowerAutomate/AutomateHeader'
+import WhatIsPAutomate from './PowerAutomate/WhatIsPAutomate'
+import AutomateServices from './PowerAutomate/AutomateServices'
+import AutomateSolutions from './PowerAutomate/AutomateSolutions'
+import AutomateAbility from './PowerAutomate/AutomateAbility'
 
 
 const PowerAutomate = () => {

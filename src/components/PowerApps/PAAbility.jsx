@@ -1,16 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-const FeatureCard = ({ icon, title, description }) => (
-  <div className="flex flex-col items-center text-center">
-    <div className="text-purple-800 text-4xl mb-4">
+const FeatureCard = ({ icon, title, description, delay, isVisible }) => (
+  <div 
+    className={`flex flex-col items-center text-center bg-gray-800 rounded-lg p-6 border border-gray-700 transition-all duration-700 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-[#049DCB25] ${
+      isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+    }`}
+    style={{ transitionDelay: `${delay}ms` }}
+  >
+    <div className="text-[#049DCB] text-4xl mb-4">
       {icon}
     </div>
-    <h3 className="text-xl font-bold text-gray-800 mb-4">{title}</h3>
-    <p className="text-sm text-gray-700">{description}</p>
+    <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
+    <p className="text-sm text-gray-300">{description}</p>
   </div>
 );
 
 const PAAbility = () => {
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const sectionRef = useRef(null);
+  
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        setAnimationStarted(true);
+      }
+    };
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15,
+    });
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const features = [
     {
       icon: <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
@@ -57,22 +90,36 @@ const PAAbility = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold text-center text-gray-900 mb-4">What Can Power Apps Do?</h1>
-      
-      <p className="text-center text-gray-700 mb-12">
-        The possibilities of Power apps are endless. Any need or requirement you have can be met with a custom application built by one of our Power Apps specialists. See some examples of specific use cases below:
-      </p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
-        {features.map((feature, index) => (
-          <FeatureCard 
-            key={index}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
-        ))}
+    <div className="w-full bg-gray-900 py-16">
+      <div ref={sectionRef} className="max-w-6xl mx-auto px-4">
+        <h1 
+          className={`text-4xl font-bold text-center text-white mb-4 transform transition-all duration-700 ${
+            animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
+          What Can Power Apps Do?
+        </h1>
+        
+        <p 
+          className={`text-center text-gray-300 mb-12 max-w-4xl mx-auto transform transition-all duration-700 delay-100 ${
+            animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
+          The possibilities of Power apps are endless. Any need or requirement you have can be met with a custom application built by one of our Power Apps specialists. See some examples of specific use cases below:
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
+          {features.map((feature, index) => (
+            <FeatureCard 
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+              delay={200 + (index * 100)}
+              isVisible={animationStarted}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

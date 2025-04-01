@@ -1,10 +1,10 @@
-import Benefits from './Benefits'
+import Benefits from './MicrosoftPowerPlatform/Benefits'
 import Footer from './Footer'
-import KeyFeatures from './KeyFeatures'
+import KeyFeatures from './MicrosoftPowerPlatform/KeyFeatures'
 import Navbar from './Navbar'
-import PowerPlatformSections from './PowerPlatformSections'
-import TableOfContents from './TableOfContents'
-import WhatIsMpp from './WhatIsMpp'
+import PowerPlatformSections from './MicrosoftPowerPlatform/PowerPlatformSections'
+import TableOfContents from './MicrosoftPowerPlatform/TableOfContents'
+import WhatIsMpp from './MicrosoftPowerPlatform/WhatIsMpp'
 
 
 const MicrosoftPowerPlatform = () => {

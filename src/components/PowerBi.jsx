@@ -1,11 +1,11 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Connect from './Connect'
-import PowerBiHeader from './PowerBiHeader'
-import WhatIsPowerBi from './WhatIsPowerBi'
-import PowerBiServices from './PowerBiServices'
-import PowerBiHelp from './PowerBiHelp'
-import PowerBiAbility from './PowerBiAbility'
+import PowerBiHeader from './PowerBi/PowerBiHeader'
+import WhatIsPowerBi from './PowerBi/WhatIsPowerBi'
+import PowerBiServices from './PowerBi/PowerBiServices'
+import PowerBiHelp from './PowerBi/PowerBiHelp'
+import PowerBiAbility from './PowerBi/PowerBiAbility'
 
 
 const PowerBi = () => {

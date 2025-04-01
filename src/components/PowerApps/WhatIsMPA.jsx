@@ -1,6 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const WhatIsMPA = () => {
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const sectionRef = useRef(null);
+  const featuresRef = useRef(null);
+  
+  useEffect(() => {
+    const handleIntersection = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target === sectionRef.current) {
+            setAnimationStarted(true);
+          } else if (entry.target === featuresRef.current) {
+            setAnimationStarted(true);
+          }
+        }
+      });
+    };
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15,
+    });
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+      if (featuresRef.current) {
+        observer.unobserve(featuresRef.current);
+      }
+    };
+  }, []);
+
   // Features data
   const features = [
     {
@@ -48,20 +89,24 @@ const WhatIsMPA = () => {
   return (
     <div>
       {/* What Is Power Apps Section */}
-      <div className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+      <div className="w-full bg-gray-900 py-16 px-4">
+        <div ref={sectionRef} className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
           {/* Left content section */}
-          <div className="lg:w-1/2">
-            <p className="text-purple-700 font-medium mb-2">Easy To Use, Easy To Maintain</p>
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">What Is Microsoft Power Apps?</h2>
+          <div 
+            className={`lg:w-1/2 transform transition-all duration-1000 ${
+              animationStarted ? 'translate-x-0 opacity-100' : 'translate-x-(-20) opacity-0'
+            }`}
+          >
+            <p className="text-[#049DCB] font-medium mb-2">Easy To Use, Easy To Maintain</p>
+            <h2 className="text-4xl font-bold text-white mb-4">What Is Microsoft Power Apps?</h2>
             
-            <p className="text-slate-700 mb-6">
+            <p className="text-gray-300 mb-6">
               Power Apps is an innovative low-code cloud service that empowers businesses to build 
               custom applications and integrate data from multiple systems, without the need for 
               custom development.
             </p>
             
-            <p className="text-slate-700 mb-8">
+            <p className="text-gray-300 mb-8">
               The limitless implementation of Power Apps makes it an extremely powerful tool that can 
               excel any business. Whether you need a custom app to improve internal productivity by 
               automating manual and repetitive tasks, or connect to thousands of customers externally 
@@ -70,8 +115,13 @@ const WhatIsMPA = () => {
           </div>
           
           {/* Right image section */}
-          <div className="lg:w-1/2 flex justify-center">
-            <div className="w-full max-w-md h-auto  overflow-hidden">
+          <div 
+            className={`lg:w-1/2 flex justify-center transform transition-all duration-1000 ${
+              animationStarted ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
+            }`}
+            style={{ transitionDelay: '200ms' }}
+          >
+            <div className="w-full max-w-md h-auto overflow-hidden rounded-lg border border-gray-700 shadow-lg">
               <img 
                 src="/Power-apps.webp" 
                 alt="Microsoft Power Apps interface on mobile and desktop" 
@@ -87,23 +137,48 @@ const WhatIsMPA = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="w-full bg-gray-800 py-16">
+        <div ref={featuresRef} className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="bg-purple-200 p-4 rounded-full mb-4">
-                  <div className="text-purple-800">
-                    {feature.icon}
-                  </div>
+              <div 
+                key={index} 
+                className={`flex flex-col items-center text-center bg-gray-700 p-6 rounded-lg border border-gray-600 transform transition-all duration-700 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#2EC74320] hover:border-[#2EC743] ${
+                  animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
+                style={{ transitionDelay: `${300 + (index * 100)}ms` }}
+              >
+                <div 
+                  className="bg-gray-600 p-4 rounded-full mb-4 text-[#049DCB]"
+                  style={{ 
+                    animation: animationStarted ? 'float 3s ease-in-out infinite' : 'none',
+                    animationDelay: `${index * 0.5}s`
+                  }}
+                >
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-purple-800 mb-4">{feature.title}</h3>
-                <p className="text-slate-700">{feature.description}</p>
+                <h3 className="text-xl font-bold text-[#049DCB] mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Animation keyframes */}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      `}</style>
     </div>
   );
 };
