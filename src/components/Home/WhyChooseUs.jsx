@@ -102,8 +102,8 @@ const WhyChooseUs = () => {
         </div>
       </div>
       
-      {/* Right Section - Image */}
-      <div className="w-full md:w-1/2 min-h-[600px]">
+      {/* Right Section - Image - Fixed for mobile responsiveness */}
+      <div className="w-full md:w-1/2 h-64 md:h-auto">
         <img 
           src="/Woman-consulting.webp" 
           alt="Digital presentation with team" 
