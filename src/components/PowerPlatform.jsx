@@ -3,7 +3,6 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import PPservices from "./PowerPlatform/PPservices"
 import Testimonials from "./Testimonials"
-import Connect from "./Connect"
 import PPdiscovery from "./PowerPlatform/PPdiscovery"
 
 const PowerPlatform = () => {
@@ -14,7 +13,6 @@ const PowerPlatform = () => {
       <PPservices />
       <PPdiscovery />
       <Testimonials />
-      <Connect />
       <Footer />
     </div>
   )

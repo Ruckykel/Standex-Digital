@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const TrainingCourses = () => {
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const sectionRef = useRef(null);
+  
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        setAnimationStarted(true);
+      }
+    };
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15,
+    });
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const courses = [
     {
       id: 'cloud-ai',
@@ -23,15 +51,27 @@ const TrainingCourses = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section ref={sectionRef} className="py-16 px-4 bg-gray-900">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        <h2 
+          className={`text-3xl font-bold text-center text-white mb-12 transform transition-all duration-700 ${
+            animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+          }`}
+        >
           Our Courses
         </h2>
 
-        <div className="space-y-8">
-          {courses.map((course) => (
-            <CourseCard key={course.id} course={course} />
+        <div className="space-y-12">
+          {courses.map((course, index) => (
+            <div 
+              key={course.id}
+              className={`transform transition-all duration-700 ${
+                animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}
+              style={{ transitionDelay: `${100 + index * 150}ms` }}
+            >
+              <CourseCard course={course} />
+            </div>
           ))}
         </div>
       </div>
@@ -41,7 +81,7 @@ const TrainingCourses = () => {
 
 const CourseCard = ({ course }) => {
   return (
-    <div className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md">
+    <div className="flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden shadow-md border border-gray-700 hover:border-[#2EC743] transition-colors duration-300">
       {/* Course Image/Flyer (Left Side) */}
       <div className="md:w-1/2 relative">
         <img 
@@ -53,19 +93,19 @@ const CourseCard = ({ course }) => {
 
       {/* Course Description and Call to Action (Right Side) */}
       <div className="md:w-1/2 p-6 flex flex-col">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">
+        <h3 className="text-xl font-semibold text-white mb-4">
           {course.title}
         </h3>
         
-        <p className="text-gray-600 mb-8">
+        <p className="text-gray-300 mb-8">
           {course.description}
         </p>
         
         <div className="mt-auto space-y-3">
-          <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-3 rounded transition duration-150">
+          <button className="w-full bg-[#049DCB] hover:bg-[#038ab4] text-white px-4 py-3 rounded transition duration-150">
             Enroll Now →
           </button>
-          <button className="w-full bg-blue-400 hover:bg-blue-500 text-white px-4 py-3 rounded transition duration-150">
+          <button className="w-full bg-[#2EC743] hover:bg-[#25a936] text-white px-4 py-3 rounded transition duration-150">
             Brochure →
           </button>
         </div>

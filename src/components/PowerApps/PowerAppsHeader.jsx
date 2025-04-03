@@ -13,14 +13,6 @@ const PowerAppsHeader = () => {
   const targetFortune = 86;
   const targetCost = 74;
 
-  // Function to handle smooth scrolling to contact form
-  const scrollToContactForm = () => {
-    const contactFormElement = document.getElementById('contact-form');
-    if (contactFormElement) {
-      contactFormElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // Animation effect
   useEffect(() => {
     let startTime;
@@ -68,8 +60,8 @@ const PowerAppsHeader = () => {
             Revolutionise your business processes with a custom app that connects to all of
             your data, built specifically for you, and is accessible across all of your devices.
           </p>
-          <button
-            onClick={scrollToContactForm}
+          <a
+            href="/Contact"
             className="bg-cyan-100 text-blue-800 font-medium py-3 px-6 rounded-md hover:bg-cyan-200 transition-colors inline-flex items-center"
           >
             Book A Free Consultation Call
@@ -85,7 +77,7 @@ const PowerAppsHeader = () => {
                 clipRule="evenodd" 
               />
             </svg>
-          </button>
+          </a>
         </div>
         
         {/* Stats Section */}

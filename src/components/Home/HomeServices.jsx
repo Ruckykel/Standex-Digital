@@ -83,9 +83,9 @@ const HomeServices = () => {
           }`}
         >
           <p className="text-gray-300">
-            Whilst our expertise lies within the Microsoft Power Platform, we are not limited to any business 
-            advocated tools or applications. We offer a range of services to help clients optimise their business 
-            processes regardless of their current infrastructure. Browse our most popular services below.
+            We are experts in Microsoft Power Platform services and also specialize in Intelligent Cloud Solutions, 
+            Web & App Development, and Digital Marketing. Our comprehensive expertise ensures that 
+            we can deliver optimal solutions tailored to your specific needs, regardless of your current technology stack.
           </p>
         </div>
         
@@ -299,13 +299,18 @@ const HomeServices = () => {
               </div>
               
               <p className="mb-6 text-gray-300">
-                The Microsoft Power Platform has four key products designed to boost your
-                company's efficiency and drive productivity. Our power platform implementation
-                will allow you to analyse your data, automate your processes, and build bespoke
-                apps for custom functionalities. Our consulting expertise lies in identifying the
-                most beneficial tools within the Power Platform suite that align perfectly with your
-                business needs. We'll also implement effective strategies to ensure these tools
-                are integrated seamlessly into your business framework.
+                The Microsoft Power Platform is our primary area of expertise, with its four key products 
+                designed to boost your company's efficiency and drive productivity. Our specialized implementation 
+                enables you to analyze data through Power BI, automate processes with Power Automate, build 
+                custom apps with Power Apps, and create engaging websites with Power Pages.
+                
+                In addition to our Power Platform solutions, we provide Intelligent Cloud Solutions for optimizing your infrastructure, 
+                Web & App Development services creating seamless digital experiences across all devices, and 
+                Digital Marketing strategies to increase visibility and generate qualified leads.
+                
+                Our consulting team excels at identifying the optimal combination of tools that align 
+                perfectly with your business needs, ensuring seamless integration into your existing
+                business framework for maximum impact and ROI.
               </p>
               
               <div 

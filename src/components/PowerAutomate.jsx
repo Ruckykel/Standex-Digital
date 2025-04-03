@@ -1,6 +1,5 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Connect from './Connect'
 import AutomateHeader from './PowerAutomate/AutomateHeader'
 import WhatIsPAutomate from './PowerAutomate/WhatIsPAutomate'
 import AutomateServices from './PowerAutomate/AutomateServices'
@@ -17,7 +16,6 @@ const PowerAutomate = () => {
       <AutomateServices/>
       <AutomateSolutions/>
       <AutomateAbility/>
-      <Connect />
       <Footer />
     </div>
   )

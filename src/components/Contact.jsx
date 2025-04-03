@@ -1,4 +1,3 @@
-import Connect from './Connect'
 import ContactHeader from './Contact/ContactHeader'
 import ContactLocation from './Contact/ContactLocation'
 import Footer from './Footer'
@@ -11,7 +10,6 @@ const Contact = () => {
       <Navbar />
       <ContactHeader />
       <ContactLocation/>
-      <Connect/>
       <Footer />
     </div>
   )

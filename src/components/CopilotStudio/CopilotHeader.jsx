@@ -1,14 +1,6 @@
 import React from 'react';
 
 const CopilotHeader = () => {
-  const scrollToContactForm = (e) => {
-    e.preventDefault();
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="w-full bg-gradient-to-b from-blue-950 to-blue-900 text-white py-16 mt-20">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -33,8 +25,7 @@ const CopilotHeader = () => {
         {/* CTA Button */}
         <div className="text-center mb-12">
           <a 
-            href="#contact-form" 
-            onClick={scrollToContactForm}
+            href="/Contact"
             className="inline-block bg-teal-200 text-blue-900 font-medium py-3 px-6 rounded hover:bg-teal-300 transition-colors duration-300"
           >
             Book A Free Consultation Call &rarr;

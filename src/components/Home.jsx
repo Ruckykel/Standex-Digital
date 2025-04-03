@@ -1,4 +1,3 @@
-import Connect from './Connect'
 import Footer from './Footer'
 import HomeAbout from './Home/HomeAbout'
 import HomeHero from './Home/HomeHero'
@@ -18,7 +17,6 @@ const Home = () => {
       <TechSolutions />
       <WhyChooseUs />
       <Testimonials />
-      <Connect />
       <Footer />
     </div>
   )

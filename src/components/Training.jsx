@@ -1,4 +1,3 @@
-import Connect from './Connect'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import TrainingCareer from './Training/TrainingCareer'
@@ -17,7 +16,6 @@ const Training = () => {
       <TrainingCareer/>
       <TrainingCourses />
       <TrainingConnect/>
-      <Connect/>
       <Footer />
     </div>
   )

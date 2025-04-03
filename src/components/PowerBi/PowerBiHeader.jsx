@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const PowerBiHeader = () => {
-  const scrollToContactForm = (e) => {
-    e.preventDefault();
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // Stats data
   const stats = [
     {
@@ -88,8 +80,7 @@ const PowerBiHeader = () => {
         {/* CTA Button */}
         <div className="text-center mb-16">
           <a 
-            href="#contact-form" 
-            onClick={scrollToContactForm}
+            href="/Contact"
             className="inline-flex items-center px-6 py-3 bg-teal-200 text-blue-900 rounded-md font-medium transition-all hover:bg-teal-100"
           >
             Book A Free Consultation Call

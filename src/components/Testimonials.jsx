@@ -8,19 +8,19 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      quote: '"Synapx provided us with a design and implementation plan for our new external Power App with integrated Power BI reporting. We were very impressed with the knowledge and experience shown by the consultants. The end result was a high performing, well governed and aesthetically pleasing Power App which is being used by our clients today."',
+      quote: '"Standex provided us with a design and implementation plan for our new external Power App with integrated Power BI reporting. We were very impressed with the knowledge and experience shown by the consultants. The end result was a high performing, well governed and aesthetically pleasing Power App which is being used by our clients today."',
       company: 'UK Insurance Company',
       person: 'Senior Project Manager',
       logo: '/The-Ocean-Logo.webp' // Replace with actual logo path
     },
     {
-      quote: '"We work with Synapx as our go-to and trusted partner for anything Power BI, or data in general, so much so we recommend them to all our clients! The team always work to first understand what our challenges are, what it is we want to achieve and with their expertise, are able to take us through, in simple terms, what the solution would be. For delivery of data projects or support with our existing data products, the team at Synapx work professionally and efficiently."',
+      quote: '"We work with Standex as our go-to and trusted partner for anything Power BI, or data in general, so much so we recommend them to all our clients! The team always work to first understand what our challenges are, what it is we want to achieve and with their expertise, are able to take us through, in simple terms, what the solution would be. For delivery of data projects or support with our existing data products, the team at Synapx work professionally and efficiently."',
       company: 'Lanware',
       person: 'Chief Technology Officer (CTO)',
       logo: '/The-Ocean-Logo.webp' // Replace with actual logo path
     },
     {
-      quote: '"As part of a major business process transformation programme, we were looking to significantly enhance our MI and BI capabilities. Having decided upon the technologies within our technical architecture design, we needed the assistance and expertise from Synapx to realise our objectives. Synapx performed brilliantly for us, working closely with technical and business stakeholders, and played a pivotal role on the programme."',
+      quote: '"As part of a major business process transformation programme, we were looking to significantly enhance our MI and BI capabilities. Having decided upon the technologies within our technical architecture design, we needed the assistance and expertise from Standex to realise our objectives. Standex performed brilliantly for us, working closely with technical and business stakeholders, and played a pivotal role on the programme."',
       company: 'The Gap Partnership',
       person: 'Head of Technology',
       logo: '/The-Ocean-Logo.webp' // Replace with actual logo path

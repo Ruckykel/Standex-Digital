@@ -1,6 +1,5 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Connect from './Connect'
 import PowerBiHeader from './PowerBi/PowerBiHeader'
 import WhatIsPowerBi from './PowerBi/WhatIsPowerBi'
 import PowerBiServices from './PowerBi/PowerBiServices'
@@ -17,7 +16,6 @@ const PowerBi = () => {
       <PowerBiServices/>
       <PowerBiHelp />
       <PowerBiAbility />
-      <Connect />
       <Footer />
     </div>
   )

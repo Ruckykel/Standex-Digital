@@ -28,16 +28,6 @@ const PPdiscovery = () => {
       }
     };
   }, []);
-
-  // Function to scroll to contact form when button is clicked
-  const scrollToContactForm = () => {
-    // Find the contact form element by ID (which already exists in your Connect component)
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      // Smooth scroll to the contact form
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   
   return (
     <div className="w-full bg-gray-900 py-16">
@@ -92,9 +82,9 @@ const PPdiscovery = () => {
               Schedule a FREE call with our power platform specialists.
             </p>
             
-            {/* CTA Button - scrolls to the contact-form id */}
-            <button 
-              onClick={scrollToContactForm}
+            {/* CTA Button - links to Contact page */}
+            <a 
+              href="/Contact"
               className={`inline-flex items-center bg-[#2EC743] text-white py-4 px-8 rounded-md font-medium transition-all duration-300 hover:bg-[#25a137] hover:scale-105 transform ${
                 animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
@@ -104,7 +94,7 @@ const PPdiscovery = () => {
               <svg className="ml-2 w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </div>

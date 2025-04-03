@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const CopilotAbility = () => {
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const sectionRef = useRef(null);
+  
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      const [entry] = entries;
+      if (entry.isIntersecting) {
+        setAnimationStarted(true);
+      }
+    };
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15,
+    });
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   // Define the capabilities data
   const capabilities = [
     {
@@ -42,15 +70,23 @@ const CopilotAbility = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="py-20 bg-gray-900 w-full">
+      <div ref={sectionRef} className="container mx-auto px-4 max-w-6xl">
         {/* Section header */}
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900 mb-6">
+        <div 
+          className={`text-center mb-16 transform transition-all duration-1000 ${
+            animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-(-20) opacity-0'
+          }`}
+        >
+          <h3 className="text-[#049DCB] font-medium mb-4">
+            Copilot Studio Features
+          </h3>
+          
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
             What Can Copilot Chatbots Do?
           </h2>
           
-          <p className="text-blue-900 max-w-4xl mx-auto mb-12">
+          <p className="text-gray-300 max-w-4xl mx-auto mb-12">
             Microsoft Copilot Studio offers a versatile platform that can transform how businesses interact with customers and streamline internal processes. 
             From handling customer inquiries to automating data retrieval, Copilot Studio's AI capabilities provide a wide range of applications tailored to meet diverse business needs.
           </p>
@@ -58,26 +94,68 @@ const CopilotAbility = () => {
         
         {/* Capabilities grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {capabilities.map((capability) => (
-            <div key={capability.id} className="text-center">
+          {capabilities.map((capability, index) => (
+            <div 
+              key={capability.id} 
+              className={`bg-gray-800 rounded-lg border border-gray-700 p-6 transform transition-all duration-700 hover:-translate-y-1 hover:shadow-lg hover:border-[#2EC743] ${
+                animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}
+              style={{ transitionDelay: `${300 + index * 100}ms` }}
+            >
               {/* Icon */}
-              <div className="text-purple-800 text-4xl mb-4 flex justify-center">
-                <span>{capability.icon}</span>
+              <div 
+                className="bg-gray-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                style={{ 
+                  animation: animationStarted ? 'float 3s ease-in-out infinite' : 'none',
+                  animationDelay: `${index * 0.3}s`
+                }}
+              >
+                <span className="text-2xl text-[#049DCB]">{capability.icon}</span>
               </div>
               
               {/* Title */}
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3 text-center">
                 {capability.title}
               </h3>
               
               {/* Description */}
-              <p className="text-blue-800">
+              <p className="text-gray-300 text-center">
                 {capability.description}
               </p>
             </div>
           ))}
         </div>
       </div>
+      
+      {/* Animation keyframes */}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      `}</style>
+      
+      {/* Background Elements */}
+      <div 
+        className={`absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#049DCB] to-transparent rounded-full filter blur-3xl opacity-0 transform transition-all duration-2000 ${
+          animationStarted ? 'opacity-5' : 'opacity-0'
+        }`}
+        style={{ zIndex: 0, transitionDelay: '300ms' }}
+      ></div>
+      
+      <div 
+        className={`absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#2EC743] to-transparent rounded-full filter blur-3xl opacity-0 transform transition-all duration-2000 ${
+          animationStarted ? 'opacity-5' : 'opacity-0'
+        }`}
+        style={{ zIndex: 0, transitionDelay: '400ms' }}
+      ></div>
     </section>
   );
 };

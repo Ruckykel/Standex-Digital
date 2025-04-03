@@ -1,6 +1,5 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Connect from "./Connect"
 import CopilotHeader from './CopilotStudio/CopilotHeader'
 import WhatIsCopilot from './CopilotStudio/WhatIsCopilot'
 import CopilotHelp from './CopilotStudio/CopilotHelp'
@@ -19,7 +18,6 @@ const CopilotStudio = () => {
       <CopilotSolutions/>
       <CopilotAbility/>
       <CopilotProcess/>
-      <Connect />
       <Footer />
     </div>
   )

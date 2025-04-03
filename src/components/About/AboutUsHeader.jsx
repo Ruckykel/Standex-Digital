@@ -1,14 +1,6 @@
 import React from 'react';
 
 const AboutUsHeader = () => {
-  const scrollToContact = (e) => {
-    e.preventDefault();
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="w-full bg-blue-900 text-white py-16 mt-20">
       <div className="max-w-4xl mx-auto px-4 text-center">
@@ -17,13 +9,13 @@ const AboutUsHeader = () => {
         <h1 className="text-5xl font-bold mb-6">About Us</h1>
         
         <p className="text-lg mb-8">
-          Synapx offer a range of services with a focus on Microsoft Power Platform
+          Standex offers a range of services with a focus on Microsoft Power Platform
           consulting. We're a dedicated team of power platform specialists who love seeing
           businesses transform and make the most out of their tools and software.
         </p>
         
-        <button 
-          onClick={scrollToContact}
+        <a 
+          href="/Contact"
           className="bg-cyan-100 text-blue-900 px-6 py-2 rounded-md hover:bg-cyan-200 transition-colors duration-300 inline-flex items-center"
         >
           Let's Chat
@@ -39,7 +31,7 @@ const AboutUsHeader = () => {
               clipRule="evenodd" 
             />
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import AIArchitectureAndDevelopment from './Services/AIArchitectureAndDevelopment'
-import Connect from './Connect'
 import DigitalMarketing from './Services/DigitalMarketing'
 import ECommerceSolutions from './Services/ECommerceSolutions'
 import Footer from './Footer'
@@ -23,7 +22,6 @@ const Services = () => {
       <ECommerceSolutions/>
       <TechElevate/>
       <ServicesDiscovery/>
-      <Connect/>
       <Footer />
     </div>
   )

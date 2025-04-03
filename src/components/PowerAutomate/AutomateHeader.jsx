@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const AutomateHeader = () => {
-  const scrollToContactForm = (e) => {
-    e.preventDefault();
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // Stats data
   const stats = [
     {
@@ -82,8 +74,8 @@ const AutomateHeader = () => {
         </div>
         
         <div>
-          <button 
-            onClick={scrollToContactForm}
+          <a 
+            href="/Contact"
             className="bg-teal-100 text-blue-900 font-medium py-3 px-6 rounded-md hover:bg-teal-200 transition-colors duration-300 inline-flex items-center"
           >
             Book A Free Consultation Call
@@ -99,7 +91,7 @@ const AutomateHeader = () => {
                 clipRule="evenodd" 
               />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
       

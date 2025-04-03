@@ -14,15 +14,6 @@ const PowerPagesHeader = () => {
   // Animation duration in milliseconds
   const animationDuration = 2000;
   
-  // Function to handle smooth scrolling to contact form
-  const scrollToContactForm = (e) => {
-    e.preventDefault();
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  
   // Animation effect using requestAnimationFrame for smoother animation
   useEffect(() => {
     let startTime;
@@ -73,8 +64,8 @@ const PowerPagesHeader = () => {
         </p>
         
         <div className="mb-8">
-          <button
-            onClick={scrollToContactForm}
+          <a
+            href="/Contact"
             className="bg-cyan-100 text-blue-800 font-medium py-3 px-6 rounded-md hover:bg-cyan-200 transition-colors inline-flex items-center"
           >
             Book A Free Consultation Call
@@ -90,7 +81,7 @@ const PowerPagesHeader = () => {
                 clipRule="evenodd" 
               />
             </svg>
-          </button>
+          </a>
         </div>
         
         {/* Stats Section */}

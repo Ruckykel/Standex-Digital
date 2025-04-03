@@ -1,6 +1,5 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Connect from './Connect'
 import PowerAppsHeader from './PowerApps/PowerAppsHeader'
 import WhatIsMPA from './PowerApps/WhatIsMPA'
 import PASolutions from './PowerApps/PASolutions'
@@ -19,7 +18,6 @@ const PowerApps = () => {
       <PAHowWeCanHelp />
       <PAAbility/>
       <PAProcess />
-      <Connect />
       <Footer />
     </div>
   )

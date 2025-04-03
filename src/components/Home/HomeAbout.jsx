@@ -141,7 +141,7 @@ const HomeAbout = () => {
                 animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
             >
-              Standex is a London-based company with consulting experience for some of the world's
+              Standex is a global company with offices in Nigeria and the United Kingdom, bringing consulting experience for some of the world's
               best-known companies. We love helping our clients get the most from their existing licenses
               and focus on delivering the best possible solutions to suit their business requirements.
               Our solutions help clients to connect their current business processes, transform their
