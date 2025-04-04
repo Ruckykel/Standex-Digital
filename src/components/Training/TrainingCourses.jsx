@@ -66,18 +66,45 @@ const TrainingCourses = () => {
       description: 'Master the fundamentals of cloud architecture, artificial intelligence, and DevOps principles. Learn to design, deploy, and manage scalable cloud solutions while implementing AI technologies and streamlining workflows.',
       image: '/CloudCourse.svg',
       enrollLink: 'https://buy.stripe.com/cN29CF2Uw5dk30A6op',
-      duration: '3 Months',
+      duration: '12 weeks (part-time)',
+      format: 'Hybrid (online and in-person sessions)',
       topics: [
-        'Cloud Computing',
-        'Prompt Engineering',
-        'Azure AI Studio',
-        'Azure DevOps'
+        {
+          title: 'Month 1: Cloud Computing Fundamentals',
+          items: [
+            'Understand cloud service models and deployment strategies',
+            'Set up and configure cloud environments',
+            'Implement security best practices for cloud resources',
+            'Master virtualization and containerization concepts'
+          ]
+        },
+        {
+          title: 'Month 2: AI & Prompt Engineering',
+          items: [
+            'Develop skills in prompt engineering for generative AI',
+            'Create and deploy AI solutions using Azure AI services',
+            'Understand machine learning workflows and model training',
+            'Build practical AI applications for business use cases'
+          ]
+        },
+        {
+          title: 'Month 3: DevOps & Continuous Integration',
+          items: [
+            'Implement CI/CD pipelines for automated software delivery',
+            'Utilize infrastructure as code for consistent deployments',
+            'Master version control and collaborative development workflows',
+            'Learn monitoring and optimization techniques for cloud resources'
+          ]
+        }
       ],
       benefits: [
-        'Master new skills with our in-depth course offering',
+        'Free $500 Azure Credits for the first 30 students',
+        'Hands-on labs and real-world projects',
         'UK Work Experience',
-        'Free $500 Azure Credits for the first 30 students'
+        'Preparation for industry-recognized certifications',
+        'Access to cutting-edge tools and technologies'
       ],
+      audience: 'IT professionals, software developers, system administrators, and technology managers looking to upskill in cloud computing, AI implementation, and modern development practices.',
       tagline: 'Master new skills with our in-depth course offering'
     },
     {
@@ -86,16 +113,42 @@ const TrainingCourses = () => {
       description: 'Discover how to build professional applications without traditional coding. Learn to use Microsoft Power Platform to create efficient solutions using low-code and no-code development approaches.',
       image: '/PowerPlatformCourse.svg',
       enrollLink: 'https://buy.stripe.com/bIY1693YAcFMbx66os',
-      duration: '3 Months',
+      duration: '12 weeks (part-time)',
+      format: 'Hybrid (online and in-person sessions)',
       topics: [
-        'Power Automate: Overview & Ecosystem, Flow Management, Logic Controls, Error Optimization, Security Governance',
-        'Power Apps: Power Apps, Canvas Apps, Apps Development, Formulas & Expressions, App Management',
-        'Copilot Studio: App Building, Flow Automation, Data Insights, AI Integration, Code Suggestions'
+        {
+          title: 'Month 1: Power Apps Foundations',
+          items: [
+            'Build custom business applications without coding experience',
+            'Design intuitive user interfaces and responsive layouts',
+            'Connect to data sources and create dynamic forms'
+          ]
+        },
+        {
+          title: 'Month 2: Power Automate Essentials',
+          items: [
+            'Automate repetitive tasks and complex workflows',
+            'Integrate with Microsoft 365 and third-party applications',
+            'Create approval processes and notification systems'
+          ]
+        },
+        {
+          title: 'Month 3: Copilot Studio & Integration',
+          items: [
+            'Design and deploy custom AI chatbots for your organization',
+            'Integrate Copilot capabilities across your Power Platform solutions',
+            'Create end-to-end business solutions combining all three technologies'
+          ]
+        }
       ],
       benefits: [
-        'Gain mastery with our well-rounded course program',
-        'UK Work Experience'
+        'Hands-on projects based on real business scenarios',
+        'Small group coaching from certified Microsoft instructors',
+        'UK Work Experience',
+        'Career advancement in high-demand fields',
+        'Flexible learning schedule for working professionals'
       ],
+      audience: 'Business professionals, analysts, administrators, and technology enthusiasts looking to enhance productivity and innovation within their organization.',
       tagline: 'Gain mastery with our well-rounded course program'
     },
     {
@@ -104,16 +157,48 @@ const TrainingCourses = () => {
       description: 'Transform raw data into meaningful insights. Learn to use BI tools to create powerful visualizations, reports, and dashboards that drive informed business decisions.',
       image: '/BusinessIntelligenceCourse.svg',
       enrollLink: 'https://buy.stripe.com/bIYaGJeDe0X47gQ5kn',
-      duration: '3 Months',
+      duration: '12 weeks (part-time)',
+      format: 'Hybrid (online and in-person sessions)',
       topics: [
-        'Excel: Data Analysis, Pivot Tables, Charting & Visualization, Formulas & Functions, Data Cleaning',
-        'SQL: Data Querying, Data Aggregation, Data Manipulation, Database Management, Joins & Relationships',
-        'Power BI: Data Modeling, Interactive Dashboards, Real-time Reporting, Data Transformation, Advanced Visualization'
+        {
+          title: 'Month 1: Excel for Data Analysis',
+          items: [
+            'Master advanced data analysis techniques',
+            'Create dynamic pivot tables and dashboards',
+            'Implement complex formulas and functions',
+            'Develop efficient data cleaning and preparation methods',
+            'Build professional charts and visualization tools'
+          ]
+        },
+        {
+          title: 'Month 2: SQL Fundamentals',
+          items: [
+            'Write effective data queries for information retrieval',
+            'Perform data aggregation and analysis',
+            'Implement data manipulation techniques',
+            'Understand database management principles',
+            'Master table joins and relationship mapping'
+          ]
+        },
+        {
+          title: 'Month 3: Power BI Development',
+          items: [
+            'Design comprehensive data models',
+            'Create interactive dashboards and reports',
+            'Implement real-time reporting solutions',
+            'Master data transformation and ETL processes',
+            'Develop advanced visualizations for complex datasets'
+          ]
+        }
       ],
       benefits: [
-        'Fuel your professional growth with our all-encompassing course',
-        'UK Work Experience'
+        'Work with real datasets across multiple industries',
+        'Build a portfolio of business intelligence projects',
+        'UK Work Experience',
+        'Learn industry-standard tools and methodologies',
+        'Develop skills for high-demand BI positions'
       ],
+      audience: 'Business analysts, data professionals, managers, and decision-makers looking to enhance their data analysis capabilities and deliver actionable insights within their organizations.',
       tagline: 'Fuel your professional growth with our all-encompassing course'
     }
   ];
@@ -180,12 +265,18 @@ const TrainingCourses = () => {
               </div>
               
               {/* Course Duration */}
-              <div className="mb-6 bg-gray-700 p-4 rounded-lg">
+              <div className="mb-6 bg-gray-700 p-4 rounded-lg flex flex-col sm:flex-row gap-4">
                 <div className="flex items-center gap-2 text-[#2EC743] font-semibold">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span>Duration: {selectedCourse.duration}</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#049DCB] font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                  <span>Format: {selectedCourse.format}</span>
                 </div>
               </div>
               
@@ -193,29 +284,24 @@ const TrainingCourses = () => {
               <div className="mb-6">
                 <h5 className="text-white text-lg font-semibold mb-3">Course Content</h5>
                 <div className="space-y-4">
-                  {selectedCourse.id === 'power-platform' || selectedCourse.id === 'business-intelligence' ? (
-                    selectedCourse.topics.map((topic, index) => {
-                      const [title, ...subtopics] = topic.split(':');
-                      return (
-                        <div key={index} className="bg-gray-700 p-4 rounded-lg">
-                          <h6 className="text-[#049DCB] font-medium mb-2">{title}</h6>
-                          <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                            {subtopics.join(':').split(',').map((subtopic, idx) => (
-                              <li key={idx}>{subtopic.trim()}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      );
-                    })
-                  ) : (
-                    <div className="bg-gray-700 p-4 rounded-lg">
-                      <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                        {selectedCourse.topics.map((topic, index) => (
-                          <li key={index}>{topic}</li>
+                  {selectedCourse.topics.map((topic, index) => (
+                    <div key={index} className="bg-gray-700 p-4 rounded-lg">
+                      <h6 className="text-[#049DCB] font-medium mb-2">{topic.title}</h6>
+                      <ul className="list-disc pl-5 text-gray-300 space-y-1">
+                        {topic.items.map((item, idx) => (
+                          <li key={idx}>{item}</li>
                         ))}
                       </ul>
                     </div>
-                  )}
+                  ))}
+                </div>
+              </div>
+              
+              {/* Who Should Attend */}
+              <div className="mb-6">
+                <h5 className="text-white text-lg font-semibold mb-3">Who Should Attend</h5>
+                <div className="bg-gray-700 p-4 rounded-lg">
+                  <p className="text-gray-300">{selectedCourse.audience}</p>
                 </div>
               </div>
               
