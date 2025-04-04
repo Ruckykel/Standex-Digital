@@ -318,7 +318,7 @@ const HomeServices = () => {
                   animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
               >
-                <a href="#" className="inline-flex items-center bg-[#049DCB] text-white py-3 px-5 rounded-md font-medium transition-all duration-200 hover:bg-[#037a9e] hover:scale-105 transform">
+                <a href="/PowerPlatform" className="inline-flex items-center bg-[#049DCB] text-white py-3 px-5 rounded-md font-medium transition-all duration-200 hover:bg-[#037a9e] hover:scale-105 transform">
                   Power Platform Solutions
                   <svg className="ml-2 w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Linkedin, Instagram, Twitter, Phone, Clock, MapPin } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const ContactLocation = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
   const sectionRef = useRef(null);
+  const emailRef = useRef(null);
+  const location = useLocation();
   
   useEffect(() => {
     const handleIntersection = (entries) => {
@@ -29,9 +32,45 @@ const ContactLocation = () => {
       }
     };
   }, []);
+  
+  // Check for section query parameter and scroll to email if needed
+  useEffect(() => {
+    // Parse the query string to check for section=email
+    const searchParams = new URLSearchParams(location.search);
+    const section = searchParams.get('section');
+    
+    if (section === 'email' && emailRef.current) {
+      // Small delay to ensure the page is fully loaded
+      setTimeout(() => {
+        emailRef.current.scrollIntoView({ behavior: 'smooth' });
+        
+        // Add highlight effect
+        emailRef.current.classList.add('pulse-highlight');
+        setTimeout(() => {
+          emailRef.current.classList.remove('pulse-highlight');
+        }, 2000);
+      }, 500);
+    }
+  }, [location.search]);
 
   return (
-    <div ref={sectionRef} className="bg-gray-900 py-16 px-4">
+    <div ref={sectionRef} className="bg-gray-900 py-16 px-4" id="contact-location-section">
+      {/* Add CSS for the highlight effect */}
+      <style>
+        {`
+          @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(4, 157, 203, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(4, 157, 203, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(4, 157, 203, 0); }
+          }
+          
+          .pulse-highlight {
+            animation: pulse 1s ease-in-out 2;
+            background-color: rgba(4, 157, 203, 0.2);
+          }
+        `}
+      </style>
+      
       <div className="max-w-6xl mx-auto">
         
         {/* Location Card */}
@@ -52,34 +91,33 @@ const ContactLocation = () => {
         </div>
         
         {/* Contact and Hours */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div ref={emailRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Social Media */}
           <div 
             className={`bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-[#2EC743] transition-all duration-300 transform transition-all duration-700 delay-300 ${
               animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            <div className="flex items-center mb-6">
+            <div  className="flex items-center mb-6">
               <div className="bg-[#049DCB]/10 p-3 rounded-full mr-4">
                 <Mail className="h-6 w-6 text-[#049DCB]" />
               </div>
               <h3 className="text-xl font-semibold text-white">Connect With Us</h3>
             </div>
             
-            <div className="grid grid-cols-1 gap-4 mt-8">
-              <a href="mailto:admin@standexdigital.tech" className="flex items-center bg-gray-700 hover:bg-[#049DCB]/20 p-4 rounded-lg transition-colors group">
+            <div className="grid grid-cols-1 gap-4 mt-8 ">
+              <a 
+                
+                href="mailto:admin@standexdigital.tech" 
+                id="contact-email"
+                className="flex items-center bg-gray-700 hover:bg-[#049DCB]/20 p-4 rounded-lg transition-colors group"
+              >
                 <div className="bg-[#049DCB]/20 p-2 rounded-full mr-3 group-hover:bg-[#049DCB]/30 transition-colors">
                   <Mail className="h-5 w-5 text-[#049DCB]" />
                 </div>
                 <span className="text-gray-300 group-hover:text-white transition-colors">admin@standexdigital.tech</span>
               </a>
               
-              <a href="mailto:standexdigital@gmail.com" className="flex items-center bg-gray-700 hover:bg-[#049DCB]/20 p-4 rounded-lg transition-colors group">
-                <div className="bg-[#049DCB]/20 p-2 rounded-full mr-3 group-hover:bg-[#049DCB]/30 transition-colors">
-                  <Mail className="h-5 w-5 text-[#049DCB]" />
-                </div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">standexdigital@gmail.com</span>
-              </a>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
                 <a href="https://www.linkedin.com/company/standex-digital" className="flex items-center bg-gray-700 hover:bg-[#049DCB]/20 p-4 rounded-lg transition-colors group">

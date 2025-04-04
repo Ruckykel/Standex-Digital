@@ -29,6 +29,7 @@ const Navbar = () => {
 
     const menuItems = [
         { title: 'Home', href: '/' },
+        { title: 'About', href: '/About' },
         {
             title: 'Power Platform',
             href: '/PowerPlatform',
@@ -42,7 +43,7 @@ const Navbar = () => {
             ]
         },
         { title: 'Services', href: '/Services' },
-        { title: 'About', href: '/About' },
+        
         { title: 'Training', href: '/Training' },
     ];
 

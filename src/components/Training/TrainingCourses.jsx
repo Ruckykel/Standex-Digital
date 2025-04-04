@@ -35,18 +35,24 @@ const TrainingCourses = () => {
       title: 'Cloud Engineering, AI & DevOps',
       description: 'Master the fundamentals of cloud architecture, artificial intelligence, and DevOps principles. Learn to design, deploy, and manage scalable cloud solutions while implementing AI technologies and streamlining workflows.',
       image: '/CloudCourse.svg',
+      enrollLink: 'https://buy.stripe.com/cN29CF2Uw5dk30A6op',
+      brochureLink: 'https://example.com/business-intelligence'
     },
     {
       id: 'power-platform',
       title: 'Power Platform: Low Code - No Code',
       description: 'Discover how to build professional applications without traditional coding. Learn to use Microsoft Power Platform to create efficient solutions using low-code and no-code development approaches.',
       image: '/PowerPlatformCourse.svg',
+      enrollLink: 'https://buy.stripe.com/bIY1693YAcFMbx66os',
+      brochureLink: 'https://example.com/business-intelligence'
     },
     {
       id: 'business-intelligence',
       title: 'Business Intelligence',
       description: 'Transform raw data into meaningful insights. Learn to use BI tools to create powerful visualizations, reports, and dashboards that drive informed business decisions.',
       image: '/BusinessIntelligenceCourse.svg',
+      enrollLink: 'https://buy.stripe.com/bIYaGJeDe0X47gQ5kn',
+      brochureLink: 'https://example.com/business-intelligence'
     }
   ];
 
@@ -102,12 +108,22 @@ const CourseCard = ({ course }) => {
         </p>
         
         <div className="mt-auto space-y-3">
-          <button className="w-full bg-[#049DCB] hover:bg-[#038ab4] text-white px-4 py-3 rounded transition duration-150">
+          <a 
+            href={course.enrollLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full bg-[#049DCB] hover:bg-[#038ab4] text-white px-4 py-3 rounded transition duration-150 text-center"
+          >
             Enroll Now →
-          </button>
-          <button className="w-full bg-[#2EC743] hover:bg-[#25a936] text-white px-4 py-3 rounded transition duration-150">
+          </a>
+          <a 
+            href={course.brochureLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full bg-[#2EC743] hover:bg-[#25a936] text-white px-4 py-3 rounded transition duration-150 text-center"
+          >
             Brochure →
-          </button>
+          </a>
         </div>
       </div>
     </div>

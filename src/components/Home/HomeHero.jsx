@@ -50,7 +50,7 @@ const HomeHero = () => {
 
     return (
         <div 
-            className="relative h-[88vh] sm:h-[100vh] bg-cover bg-center bg-no-repeat"
+            className="relative min-h-fit bg-cover bg-center bg-no-repeat pt-16 pb-8 sm:pb-12 md:pb-16 lg:pb-20 mt-20"
             style={{ backgroundImage: 'url("/TechBng.svg")' }}
         >
             {/* Gradient Overlay */}
@@ -124,22 +124,28 @@ const HomeHero = () => {
             `}</style>
 
             {/* Content */}
-            <div className="relative z-10 pt-16 sm">
-                <div className="max-w-7xl mx-auto px-4 py-20 sm:py-24">
+            <div className="relative z-10">
+                <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center">
-                        <p className="hero-subtitle opacity-0 mb-7 max-w-md mx-auto text-base text-blue-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                          Standex | Microsoft Power Platform & Data Specialists 
+                        <p className="hero-subtitle opacity-0 mb-5 sm:mb-6 max-w-md mx-auto text-base text-blue-100 sm:text-lg md:text-xl md:max-w-3xl">
+                            Standex | Microsoft Power Platform & Data Specialists 
                         </p>
-                        <h1 className="text-4xl font-semibold text-white sm:text-4xl md:text-5xl">
-                            <span className="heading-line block mb-2 sm:mb-3 md:mb-5">Unleash The Power of The</span>
+                        
+                        <h1 className="text-4xl font-semibold text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                            <span className="heading-line block mb-2 sm:mb-3">Unleash The Power of The</span>
                             <span className="heading-line block">Microsoft Power Platform</span>
                         </h1>
                         
-                        <div className="mt-11 sm:mt-14 flex justify-center">
+                        {/* Added new subtitle line for "Low Code, High Impact..." */}
+                        <p className="mt-6 sm:mt-8 mb-8 sm:mb-10 max-w-lg mx-auto text-base text-blue-100 sm:text-lg md:text-xl">
+                            Low Code, High Impact: Revolutionising Business Solutions for your Industry
+                        </p>
+                        
+                        <div className="mt-6 sm:mt-8 flex justify-center">
                             <div className="rounded-md shadow">
                                 <a
                                     href="#"
-                                    className="hero-button inline-flex items-center justify-center px-8 py-2 border border-transparent text-base font-medium rounded-md text-[#185c4a] bg-blue-50 hover:bg-white transition-colors duration-200 md:py-2 md:text-lg md:px-10"
+                                    className="hero-button inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#185c4a] bg-blue-50 hover:bg-white transition-colors duration-200 md:py-3 md:text-lg md:px-10"
                                 >
                                     See How We Can Help →
                                 </a>
@@ -147,14 +153,14 @@ const HomeHero = () => {
                         </div>
 
                         {/* Power Platform Icons */}
-                        <div className="mt-12">
-                            <div className="flex justify-center items-center gap-4 md:gap-8">
+                        <div className="mt-12 sm:mt-14 md:mt-16">
+                            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10">
                                 {powerPlatformIcons.map((icon, index) => (
                                     <div key={icon.name}>
                                         <img
                                             src={icon.src}
                                             alt={icon.name}
-                                            className={`platform-icon w-8 h-8 md:w-12 md:h-12 transition-transform duration-200 hover:scale-110`}
+                                            className={`platform-icon w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 transition-transform duration-200 hover:scale-110`}
                                             style={{ animationDelay: `${index * 0.15}s` }}
                                         />
                                     </div>
