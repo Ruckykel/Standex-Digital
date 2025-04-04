@@ -194,7 +194,7 @@ const Footer = () => {
         
         {/* Copyright and Legal Links */}
         <div 
-          className={`flex flex-col md:flex-row justify-between items-center pt-8 transform transition-all duration-700 ${
+          className={`flex flex-col md:flex-row justify-center items-center pt-8 transform transition-all duration-700 ${
             animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
           style={{ transitionDelay: '1000ms' }}
@@ -203,12 +203,6 @@ const Footer = () => {
             <p className="text-sm">Copyright © 2025 Standex Ltd. All Rights Reserved</p>
           </div>
           
-          <div className="flex space-x-6">
-            <a href="#" className="text-sm hover:text-[#2EC743] transition-colors">Cookies</a>
-            <a href="#" className="text-sm hover:text-[#2EC743] transition-colors">Privacy Policy</a>
-            <a href="#" className="text-sm hover:text-[#2EC743] transition-colors">Disclaimer</a>
-            <a href="#" className="text-sm hover:text-[#2EC743] transition-colors">Modern Slavery Statement</a>
-          </div>
         </div>
       </div>
     </footer>
