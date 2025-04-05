@@ -35,7 +35,7 @@ const TrainingCourses = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        setIsModalOpen(false);
+        closeModal();
       }
     };
 
@@ -51,12 +51,17 @@ const TrainingCourses = () => {
   const openModal = (course) => {
     setSelectedCourse(course);
     setIsModalOpen(true);
+    // Store current scroll position before disabling it
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
+    // Use setTimeout to ensure scrolling is re-enabled after modal animation
+    setTimeout(() => {
+      document.body.style.overflow = '';
+      document.body.style.overflowY = 'auto';
+    }, 10);
   };
 
   const courses = [
@@ -67,7 +72,7 @@ const TrainingCourses = () => {
       image: '/CloudCourse.svg',
       enrollLink: 'https://buy.stripe.com/cN29CF2Uw5dk30A6op',
       duration: '12 weeks (part-time)',
-      format: 'Hybrid (online and in-person sessions)',
+      format: 'Online',
       topics: [
         {
           title: 'Month 1: Cloud Computing Fundamentals',
@@ -114,7 +119,7 @@ const TrainingCourses = () => {
       image: '/PowerPlatformCourse.svg',
       enrollLink: 'https://buy.stripe.com/bIY1693YAcFMbx66os',
       duration: '12 weeks (part-time)',
-      format: 'Hybrid (online and in-person sessions)',
+      format: 'Online',
       topics: [
         {
           title: 'Month 1: Power Apps Foundations',
@@ -158,7 +163,7 @@ const TrainingCourses = () => {
       image: '/BusinessIntelligenceCourse.svg',
       enrollLink: 'https://buy.stripe.com/bIYaGJeDe0X47gQ5kn',
       duration: '12 weeks (part-time)',
-      format: 'Hybrid (online and in-person sessions)',
+      format: 'Online',
       topics: [
         {
           title: 'Month 1: Excel for Data Analysis',
@@ -274,7 +279,7 @@ const TrainingCourses = () => {
                 </div>
                 <div className="flex items-center gap-2 text-[#049DCB] font-semibold">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <span>Format: {selectedCourse.format}</span>
                 </div>
