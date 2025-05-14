@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PageTracker from './PageTracker'; // <- Add this line
 import Home from './components/Home';
 import PowerPlatform from './components/PowerPlatform';
 import PowerApps from './components/PowerApps';
@@ -15,8 +16,9 @@ import Contact from './components/Contact';
 function App() {
   return (
     <Router>
+      <PageTracker /> {/* <- Add this inside the Router */}
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/PowerPlatform" element={<PowerPlatform />} />
         <Route path="/PowerApps" element={<PowerApps />} />
         <Route path="/PowerAutomate" element={<PowerAutomate />} />
@@ -32,6 +34,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
