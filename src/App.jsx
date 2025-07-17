@@ -12,6 +12,9 @@ import CopilotStudio from './components/CopilotStudio';
 import About from './components/About';
 import Training from './components/Training';
 import Contact from './components/Contact';
+import CloudAICourse from './components/Training/CloudAICourse';
+import PowerPlatformCourse from './components/Training/PowerPlatformCourse';
+import BusinessIntelligenceCourse from './components/Training/BusinessIntelligenceCourse';
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Training" element={<Training />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/courses/cloud-ai" element={<CloudAICourse />} />
+        <Route path="/courses/power-platform" element={<PowerPlatformCourse />} />
+        <Route path="/courses/business-intelligence" element={<BusinessIntelligenceCourse />} />
       </Routes>
     </Router>
   );

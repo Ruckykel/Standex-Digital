@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const TrainingCourses = () => {
   const [animationStarted, setAnimationStarted] = useState(false);
-  const [selectedCourse, setSelectedCourse] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const sectionRef = useRef(null);
-  const modalRef = useRef(null);
   
   useEffect(() => {
     const handleIntersection = (entries) => {
@@ -31,38 +29,6 @@ const TrainingCourses = () => {
       }
     };
   }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
-        closeModal();
-      }
-    };
-
-    if (isModalOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-    
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isModalOpen]);
-
-  const openModal = (course) => {
-    setSelectedCourse(course);
-    setIsModalOpen(true);
-    // Store current scroll position before disabling it
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    // Use setTimeout to ensure scrolling is re-enabled after modal animation
-    setTimeout(() => {
-      document.body.style.overflow = '';
-      document.body.style.overflowY = 'auto';
-    }, 10);
-  };
 
   const courses = [
     {
@@ -228,141 +194,16 @@ const TrainingCourses = () => {
               }`}
               style={{ transitionDelay: `${100 + index * 150}ms` }}
             >
-              <CourseCard course={course} openModal={openModal} />
+              <CourseCard course={course} />
             </div>
           ))}
         </div>
       </div>
-
-      {/* Course Brochure Modal */}
-      {isModalOpen && selectedCourse && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
-          <div 
-            ref={modalRef}
-            className="bg-gray-800 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto"
-          >
-            <div className="sticky top-0 bg-gray-800 p-4 border-b border-gray-700 flex justify-between items-center">
-              <h3 className="text-xl font-bold text-white">{selectedCourse.title} - Course Overview</h3>
-              <button 
-                onClick={closeModal}
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            
-            <div className="p-6">
-              {/* Course Header */}
-              <div className="mb-6 flex flex-col sm:flex-row items-center gap-4">
-                <div className="sm:w-1/4">
-                  <div className="bg-[#049DCB] rounded-full p-3 inline-flex">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="sm:w-3/4">
-                  <p className="text-gray-300 text-sm mb-1">StandEx Digital - Tech Elevate</p>
-                  <h4 className="text-white text-lg font-semibold">{selectedCourse.tagline}</h4>
-                </div>
-              </div>
-              
-              {/* Course Duration */}
-              <div className="mb-6 bg-gray-700 p-4 rounded-lg flex flex-col sm:flex-row gap-4">
-                <div className="flex items-center gap-2 text-[#2EC743] font-semibold">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>Duration: {selectedCourse.duration}</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#049DCB] font-semibold">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span>Format: {selectedCourse.format}</span>
-                </div>
-              </div>
-              
-              {/* Course Content */}
-              <div className="mb-6">
-                <h5 className="text-white text-lg font-semibold mb-3">Course Content</h5>
-                <div className="space-y-4">
-                  {selectedCourse.topics.map((topic, index) => (
-                    <div key={index} className="bg-gray-700 p-4 rounded-lg">
-                      <h6 className="text-[#049DCB] font-medium mb-2">{topic.title}</h6>
-                      <ul className="list-disc pl-5 text-gray-300 space-y-1">
-                        {topic.items.map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Who Should Attend */}
-              <div className="mb-6">
-                <h5 className="text-white text-lg font-semibold mb-3">Who Should Attend</h5>
-                <div className="bg-gray-700 p-4 rounded-lg">
-                  <p className="text-gray-300">{selectedCourse.audience}</p>
-                </div>
-              </div>
-              
-              {/* Benefits */}
-              <div className="mb-6">
-                <h5 className="text-white text-lg font-semibold mb-3">Benefits</h5>
-                <div className="bg-gray-700 p-4 rounded-lg">
-                  <ul className="list-disc pl-5 text-gray-300 space-y-2">
-                    {selectedCourse.benefits.map((benefit, index) => (
-                      <li key={index}>{benefit}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              
-              {/* Microsoft Partner */}
-              <div className="mb-6 bg-gray-700 p-4 rounded-lg">
-                <div className="flex items-center gap-2">
-                  <div className="flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" width="32" height="32">
-                      <rect x="1" y="1" width="10" height="10" fill="#F25022" />
-                      <rect x="12" y="1" width="10" height="10" fill="#7FBA00" />
-                      <rect x="1" y="12" width="10" height="10" fill="#00A4EF" />
-                      <rect x="12" y="12" width="10" height="10" fill="#FFB900" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-white text-sm">Microsoft Learning Partner</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Enroll Button */}
-              <a 
-                href={selectedCourse.enrollLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full bg-[#049DCB] hover:bg-[#038ab4] text-white px-4 py-4 rounded-lg transition duration-150 text-center font-semibold"
-              >
-                Enroll Now →
-              </a>
-
-              {/* Contact */}
-              <div className="mt-6 text-center text-gray-400 text-sm">
-                <p>Have questions? Contact us at:</p>
-                <p className="text-[#2EC743]">techelevate@standexdigital.tech | +447918262629</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
 
-const CourseCard = ({ course, openModal }) => {
+const CourseCard = ({ course }) => {
   return (
     <div className="flex flex-col md:flex-row bg-gray-800 rounded-lg overflow-hidden shadow-md border border-gray-700 hover:border-[#2EC743] transition-colors duration-300">
       {/* Course Image/Flyer (Left Side) */}
@@ -393,12 +234,12 @@ const CourseCard = ({ course, openModal }) => {
           >
             Enroll Now →
           </a>
-          <button 
-            onClick={() => openModal(course)}
+          <Link 
+            to={`/courses/${course.id}`}
             className="block w-full bg-[#2EC743] hover:bg-[#25a936] text-white px-4 py-3 rounded transition duration-150 text-center"
           >
-            View Brochure →
-          </button>
+            View Course Details →
+          </Link>
         </div>
       </div>
     </div>
