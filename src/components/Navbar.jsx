@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ShoppingCart } from 'lucide-react';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +30,8 @@ const Navbar = () => {
     const menuItems = [
         { title: 'Home', href: '/' },
         { title: 'About', href: '/About' },
+        { title: 'Tech Elevate', href: '/TechElevate', icon: 'cart' },
+        { title: 'Standex AI', href: '/StandexAI' },
         {
             title: 'Power Platform',
             href: '/PowerPlatform',
@@ -94,8 +96,9 @@ const Navbar = () => {
                                 ) : (
                                     <a
                                         href={item.href}
-                                        className="text-gray-200 hover:text-[#2EC743] px-3 py-2 rounded-md text-base font-medium"
+                                        className="text-gray-200 hover:text-[#2EC743] px-3 py-2 rounded-md text-base font-medium flex items-center gap-1"
                                     >
+                                        {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
                                         {item.title}
                                     </a>
                                 )}
@@ -153,8 +156,9 @@ const Navbar = () => {
                             ) : (
                                 <a
                                     href={item.href}
-                                    className="block px-4 py-2 text-base font-medium text-gray-200 hover:text-[#2EC743]"
+                                    className="px-4 py-2 text-base font-medium text-gray-200 hover:text-[#2EC743] flex items-center gap-2"
                                 >
+                                    {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
                                     {item.title}
                                 </a>
                             )}
