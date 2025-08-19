@@ -30,8 +30,6 @@ const Navbar = () => {
     const menuItems = [
         { title: 'Home', href: '/' },
         { title: 'About', href: '/About' },
-        { title: 'Tech Elevate', href: '/TechElevate', icon: 'cart' },
-        { title: 'Standex AI', href: '/StandexAI' },
         {
             title: 'Power Platform',
             href: '/PowerPlatform',
@@ -45,8 +43,9 @@ const Navbar = () => {
             ]
         },
         { title: 'Services', href: '/Services' },
-        
         { title: 'Training', href: '/Training' },
+        { title: 'Tech Elevate', href: 'https://techelevate.shop', icon: 'cart', external: true },
+        { title: 'Standex AI', href: 'https://standexai.com', external: true },
     ];
 
     return (
@@ -96,7 +95,9 @@ const Navbar = () => {
                                 ) : (
                                     <a
                                         href={item.href}
-                                        className="text-gray-200 hover:text-[#2EC743] px-3 py-2 rounded-md text-base font-medium flex items-center gap-1"
+                                        target={item.external ? '_blank' : undefined}
+                                        rel={item.external ? 'noopener noreferrer' : undefined}
+                                        className={`${item.external ? 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700' : 'text-gray-200 hover:text-[#2EC743]'} px-3 py-2 rounded-md text-base font-medium flex items-center gap-1`}
                                     >
                                         {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
                                         {item.title}
@@ -156,7 +157,9 @@ const Navbar = () => {
                             ) : (
                                 <a
                                     href={item.href}
-                                    className="px-4 py-2 text-base font-medium text-gray-200 hover:text-[#2EC743] flex items-center gap-2"
+                                    target={item.external ? '_blank' : undefined}
+                                    rel={item.external ? 'noopener noreferrer' : undefined}
+                                    className={`${item.external ? 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700' : 'text-gray-200 hover:text-[#2EC743]'} px-4 py-2 text-base font-medium flex items-center gap-2`}
                                 >
                                     {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
                                     {item.title}

@@ -1,26 +1,16 @@
-import Navbar from './Navbar'
-import Footer from './Footer'
+import { useEffect } from 'react'
 
 const StandexAIPage = () => {
+  useEffect(() => {
+    window.location.replace('https://standexai.com')
+  }, [])
   return (
-    <div className='overflow-x-hidden min-h-screen flex flex-col'>
-      <Navbar />
-      <div 
-        className="relative bg-gray-900 mt-20"
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] to-[#020617]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
-          <p className="text-blue-100 text-lg md:text-xl mb-4">AI Solutions</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Standex AI</h1>
-          <p className="text-blue-100 text-base md:text-lg max-w-3xl mx-auto mb-8">
-            Transform your business with intelligent AI systems, from copilots to predictive analytics and automation.
-          </p>
-          <a href="#contact" className="inline-block px-8 py-3 bg-[#2EC743] text-white font-semibold rounded-lg hover:bg-[#25a83a] transition-colors">
-            Start a Project
-          </a>
-        </div>
+    <div className='min-h-screen flex items-center justify-center bg-[#0b1220] text-white mt-20'>
+      <div className='text-center px-6'>
+        <p className='text-sm uppercase tracking-widest text-blue-300 mb-2'>Redirecting</p>
+        <h1 className='text-2xl font-semibold mb-3'>Standex AI</h1>
+        <p className='text-blue-100'>Taking you to standexai.com… If you are not redirected, <a className='text-[#2EC743] underline' href='https://standexai.com'>click here</a>.</p>
       </div>
-      <Footer />
     </div>
   )
 }

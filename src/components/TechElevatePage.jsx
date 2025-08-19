@@ -1,26 +1,16 @@
-import Navbar from './Navbar'
-import Footer from './Footer'
+import { useEffect } from 'react'
 
 const TechElevatePage = () => {
+  useEffect(() => {
+    window.location.replace('https://techelevate.shop')
+  }, [])
   return (
-    <div className='overflow-x-hidden min-h-screen flex flex-col'>
-      <Navbar />
-      <div 
-        className="relative bg-gray-900 mt-20"
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0d2720df] to-[#02183cdc]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
-          <p className="text-blue-100 text-lg md:text-xl mb-4">Professional Development</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Tech Elevate</h1>
-          <p className="text-blue-100 text-base md:text-lg max-w-3xl mx-auto mb-8">
-            Industry-leading training programs and certification paths to upskill your team and accelerate innovation.
-          </p>
-          <a href="#programs" className="inline-block px-8 py-3 bg-[#049DCB] text-white font-semibold rounded-lg hover:bg-[#037a9e] transition-colors">
-            Explore Programs
-          </a>
-        </div>
+    <div className='min-h-screen flex items-center justify-center bg-black text-white mt-20'>
+      <div className='text-center px-6'>
+        <p className='text-sm uppercase tracking-widest text-gray-400 mb-2'>Redirecting</p>
+        <h1 className='text-2xl font-semibold mb-3'>Tech Elevate</h1>
+        <p className='text-gray-300'>Taking you to techelevate.shop… If you are not redirected, <a className='text-[#2EC743] underline' href='https://techelevate.shop'>click here</a>.</p>
       </div>
-      <Footer />
     </div>
   )
 }
