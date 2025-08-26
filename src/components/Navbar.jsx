@@ -93,15 +93,22 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 ) : (
-                                    <a
-                                        href={item.href}
-                                        target={item.external ? '_blank' : undefined}
-                                        rel={item.external ? 'noopener noreferrer' : undefined}
-                                        className={`${item.external ? 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700' : 'text-gray-200 hover:text-[#2EC743]'} px-3 py-2 rounded-md text-base font-medium flex items-center gap-1`}
-                                    >
-                                        {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
-                                        {item.title}
-                                    </a>
+                                    item.external ? (
+                                        <span
+                                            aria-disabled="true"
+                                            className={`${item.external ? 'bg-gray-800 text-white border border-gray-700 opacity-90' : 'text-gray-200'} px-3 py-2 rounded-md text-base font-medium flex items-center gap-1 cursor-not-allowed`}
+                                        >
+                                            {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
+                                            {item.title}
+                                        </span>
+                                    ) : (
+                                        <a
+                                            href={item.href}
+                                            className="text-gray-200 hover:text-[#2EC743] px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            {item.title}
+                                        </a>
+                                    )
                                 )}
                             </div>
                         ))}
@@ -155,15 +162,22 @@ const Navbar = () => {
                                     )}
                                 </div>
                             ) : (
-                                <a
-                                    href={item.href}
-                                    target={item.external ? '_blank' : undefined}
-                                    rel={item.external ? 'noopener noreferrer' : undefined}
-                                    className={`${item.external ? 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-700' : 'text-gray-200 hover:text-[#2EC743]'} px-4 py-2 text-base font-medium flex items-center gap-2`}
-                                >
-                                    {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
-                                    {item.title}
-                                </a>
+                                item.external ? (
+                                    <span
+                                        aria-disabled="true"
+                                        className={`${item.external ? 'bg-gray-800 text-white border border-gray-700 opacity-90' : 'text-gray-200'} px-4 py-2 text-base font-medium flex items-center gap-2 cursor-not-allowed`}
+                                    >
+                                        {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
+                                        {item.title}
+                                    </span>
+                                ) : (
+                                    <a
+                                        href={item.href}
+                                        className="text-gray-200 hover:text-[#2EC743] px-4 py-2 text-base font-medium"
+                                    >
+                                        {item.title}
+                                    </a>
+                                )
                             )}
                         </div>
                     ))}
