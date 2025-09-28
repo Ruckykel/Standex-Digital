@@ -10,13 +10,13 @@ const Navbar = () => {
     useEffect(() => {
         const controlNavbar = () => {
             const currentScrollY = window.scrollY;
-            
+
             if (currentScrollY < lastScrollY) {
                 setIsVisible(true);
             } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
                 setIsVisible(false);
             }
-            
+
             setLastScrollY(currentScrollY);
         };
 
@@ -45,20 +45,18 @@ const Navbar = () => {
         { title: 'Services', href: '/Services' },
         { title: 'Training', href: '/Training' },
         { title: 'Tech Elevate', href: 'https://techelevate.shop', icon: 'cart', external: true },
-        { title: 'Standex AI', href: 'https://standexai.com', external: true },
     ];
 
     return (
-        <nav className={`bg-gray-900 fixed w-full z-50 transition-transform duration-300 ${
-            isVisible ? 'translate-y-0' : '-translate-y-full'
-        }`}>
+        <nav className={`bg-gray-900 fixed w-full z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+            }`}>
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between h-20">
                     <div className="flex-shrink-0 flex items-center">
                         <a href="/" className="flex items-center">
-                            <img 
-                                src="/StandexLogo.webp"  
-                                alt="Standex Logo" 
+                            <img
+                                src="/StandexLogo.webp"
+                                alt="Standex Logo"
                                 className="h-11 w-auto"
                             />
                         </a>
@@ -70,7 +68,7 @@ const Navbar = () => {
                             <div key={item.title} className="relative group">
                                 {item.items ? (
                                     <div className="h-full">
-                                        <a 
+                                        <a
                                             href={item.href}
                                             className="flex items-center text-gray-200 group-hover:text-[#2EC743] px-3 py-2 rounded-md text-base font-medium"
                                         >
