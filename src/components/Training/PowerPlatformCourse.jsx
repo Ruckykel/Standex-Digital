@@ -76,7 +76,7 @@ const PowerPlatformCourse = () => {
               </div>
             </div>
             <div className="sm:w-3/4 text-center sm:text-left">
-              <p className="text-gray-300 text-sm mb-2">StandEx Digital - Tech Elevate</p>
+              <p className="text-gray-300 text-sm mb-2">StandEx Digital - Standex Digital Training</p>
               <h1 className="text-3xl font-bold text-white mb-2">{course.title}</h1>
               <h2 className="text-xl text-[#049DCB]">{course.tagline}</h2>
             </div>

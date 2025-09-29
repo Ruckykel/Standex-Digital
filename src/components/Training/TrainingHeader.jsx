@@ -39,7 +39,7 @@ const TrainingHeader = () => {
               animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            Tech Elevate
+            Standex Digital Training
           </h1>
           <h2 
             className={`text-2xl md:text-3xl font-semibold text-white mb-4 transform transition-all duration-700 delay-100 ${
@@ -53,7 +53,7 @@ const TrainingHeader = () => {
               animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
-            Welcome to Tech Elevate, where industry professionals teach practical 
+            Welcome to Standex Digital Training, where industry professionals teach practical 
             technology training programs to help you gain real-world skills for 
             immediate job placement.
           </p>

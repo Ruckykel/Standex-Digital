@@ -105,7 +105,7 @@ const WhyChooseTraining = () => {
             animationStarted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          Why Choose Tech Elevate
+          Why Choose Standex Digital Training
         </h2>
         <div 
           className={`w-16 h-1 bg-[#049DCB] mx-auto mb-12 transform transition-all duration-700 delay-100 ${
