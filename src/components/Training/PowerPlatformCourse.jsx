@@ -4,48 +4,105 @@ import { Link } from 'react-router-dom';
 
 const PowerPlatformCourse = () => {
   const course = {
-    id: 'power-platform',
-    title: 'Power Platform: Low Code - No Code',
-    description: 'Discover how to build professional applications without traditional coding. Learn to use Microsoft Power Platform to create efficient solutions using low-code and no-code development approaches.',
+    id: 'power-platform-bi',
+    title: 'Standex Certified Power Platform & Business Intelligence Practitioner (SCPBE)',
+    description: 'End-to-end Power Platform and BI mastery: Power Apps, Power Automate, Power BI, Copilot Studio, SQL, Dataverse, data modelling, integration, and full enterprise solution delivery.',
     image: '/PowerPlatformCourse.svg',
     enrollLink: 'https://buy.stripe.com/bIY1693YAcFMbx66os',
     duration: '12 weeks (part-time)',
     format: 'Online',
     topics: [
       {
-        title: 'Month 1: Power Apps Foundations',
+        title: 'Module 1 – Power Platform Foundations',
         items: [
-          'Build custom business applications without coding experience',
-          'Design intuitive user interfaces and responsive layouts',
-          'Connect to data sources and create dynamic forms'
+          'Microsoft ecosystem: M365, Azure, Power Platform',
+          'Power Apps, Power Automate, Power BI, Copilot Studio overview',
+          'Dataverse basics, licensing, and connectors',
+          'ALM basics, environments, and DLP policies'
         ]
       },
       {
-        title: 'Month 2: Power Automate Essentials',
+        title: 'Module 2 – SQL & Data Engineering Essentials',
         items: [
-          'Automate repetitive tasks and complex workflows',
-          'Integrate with Microsoft 365 and third-party applications',
-          'Create approval processes and notification systems'
+          'Relational concepts, keys, and relationships',
+          'SQL from SELECT to window functions',
+          'Normalised vs denormalised schemas',
+          'Connecting SQL to Power Apps and Power BI'
         ]
       },
       {
-        title: 'Month 3: Copilot Studio & Integration',
+        title: 'Module 3 – Data Modelling & Architecture',
         items: [
-          'Design and deploy custom AI chatbots for your organization',
-          'Integrate Copilot capabilities across your Power Platform solutions',
-          'Create end-to-end business solutions combining all three technologies'
+          'Star vs snowflake schemas; fact vs dimension tables',
+          'Optimised Dataverse tables and governance',
+          'Power BI modelling: relationships and direction',
+          'Dataflows vs Dataverse vs SQL'
+        ]
+      },
+      {
+        title: 'Module 4 – Power Apps (Canvas & Model-Driven)',
+        items: [
+          'Building Canvas apps: screens, forms, galleries',
+          'PowerFX deep dive: Patch, Collect, LookUp, Filter',
+          'Model-driven structure and security roles',
+          'Offline mode, responsive design, deployment and sharing'
+        ]
+      },
+      {
+        title: 'Module 5 – Power Automate (Cloud + Desktop)',
+        items: [
+          'Automated, Instant, Scheduled, and Business Process flows',
+          'Approvals frameworks, scopes, retries, and error handling',
+          'Connecting to SQL, Dataverse, SharePoint',
+          'Power Automate Desktop basics for UI automation'
+        ]
+      },
+      {
+        title: 'Module 6 – Power BI (End-to-End Analytics)',
+        items: [
+          'Import vs DirectQuery; Power Query ETL best practices',
+          'DAX fundamentals and advanced time intelligence',
+          'Report design, UX, accessibility',
+          'Publishing, workspaces, apps, security, and RLS'
+        ]
+      },
+      {
+        title: 'Module 7 – Copilot Studio (AI Automation & Agents)',
+        items: [
+          'Building copilots, topics, entities, and triggers',
+          'Integrations with Power Apps and Flows',
+          'SQL/Dataverse connectivity and advanced prompts',
+          'Deployment to Teams/web and AI safety monitoring'
+        ]
+      },
+      {
+        title: 'Module 8 – Integration & Solution Architecture',
+        items: [
+          'Full enterprise solution design and documentation',
+          'Performance optimisation and governance',
+          'Security, compliance, and deployment strategies',
+          'Connecting apps, flows, data, BI, and copilots'
+        ]
+      },
+      {
+        title: 'Module 9 – Capstone Project (Certification Requirement)',
+        items: [
+          'SQL backend plus Power App (canvas/model-driven)',
+          'Automated workflow with Power Automate',
+          'Power BI dashboards with proper data models',
+          'Copilot integrated with business logic and presentation'
         ]
       }
     ],
     benefits: [
-      'Hands-on projects based on real business scenarios',
-      'Small group coaching from certified Microsoft instructors',
-      'UK Work Experience',
-      'Career advancement in high-demand fields',
-      'Flexible learning schedule for working professionals'
+      'Certification: Standex Certified Power Platform & BI Engineer (SCPBE)',
+      'Portfolio-ready capstone covering apps, automation, BI, and copilots',
+      'Data modelling depth with SQL, Dataverse, and Power BI',
+      'Enterprise-grade ALM, governance, and security practices',
+      'Career outcomes across app development, automation, and analytics'
     ],
-    audience: 'Business professionals, analysts, administrators, and technology enthusiasts looking to enhance productivity and innovation within their organization.',
-    tagline: 'Gain mastery with our well-rounded course program'
+    audience: 'Business and technical professionals who need to design, build, automate, and analyze end-to-end solutions on the Microsoft Power Platform with strong BI foundations.',
+    tagline: 'Deliver production-ready Power Platform and BI solutions end to end'
   };
 
   return (

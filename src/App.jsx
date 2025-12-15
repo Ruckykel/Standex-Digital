@@ -14,7 +14,6 @@ import Training from './components/Training';
 import Contact from './components/Contact';
 import CloudAICourse from './components/Training/CloudAICourse';
 import PowerPlatformCourse from './components/Training/PowerPlatformCourse';
-import BusinessIntelligenceCourse from './components/Training/BusinessIntelligenceCourse';
 import TechElevatePage from './components/TechElevatePage';
 import StandexAIPage from './components/StandexAIPage';
 
@@ -35,9 +34,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Training" element={<Training />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/courses/cloud-ai" element={<CloudAICourse />} />
-        <Route path="/courses/power-platform" element={<PowerPlatformCourse />} />
-        <Route path="/courses/business-intelligence" element={<BusinessIntelligenceCourse />} />
+        <Route path="/courses/ai-practitioner" element={<CloudAICourse />} />
+        <Route path="/courses/power-platform-bi" element={<PowerPlatformCourse />} />
         <Route path="/TechElevate" element={<TechElevatePage />} />
         <Route path="/StandexAI" element={<StandexAIPage />} />
       </Routes>

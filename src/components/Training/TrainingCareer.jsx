@@ -37,64 +37,40 @@ const TrainingCareer = () => {
 
   const careerData = [
     {
-      icon: <BarChart className="w-6 h-6 text-[#049DCB]" />,
-      title: "Business Intelligence Analyst",
-      description: "Career prospects in various industries, with a focus on data analysis and strategic decision-making.",
-      salary: "£40,000 - £70,000"
+      icon: <Brain className="w-6 h-6 text-[#049DCB]" />,
+      title: "Artificial Intelligence Practitioner",
+      description: "Design and deploy AI solutions with governance, security, and measurable business outcomes.",
+      salary: "£55,000 - £100,000"
     },
     {
-      icon: <Brain className="w-6 h-6 text-[#049DCB]" />,
-      title: "Data Scientist",
-      description: "Opportunities in tech companies, finance, healthcare, and more, focusing on predictive modeling and big data.",
-      salary: "£50,000 - £90,000"
+      icon: <Database className="w-6 h-6 text-[#049DCB]" />,
+      title: "Machine Learning / MLOps Engineer",
+      description: "Operationalise ML and GenAI systems with monitoring, risk controls, and reliability practices.",
+      salary: "£60,000 - £105,000"
+    },
+    {
+      icon: <BarChart className="w-6 h-6 text-[#049DCB]" />,
+      title: "Business Intelligence Analyst",
+      description: "Deliver Power BI insights, dashboards, and data models that inform executive decisions.",
+      salary: "£40,000 - £75,000"
     },
     {
       icon: <Cog className="w-6 h-6 text-[#049DCB]" />,
       title: "Power Platform Developer",
-      description: "High demand in businesses seeking to automate processes and improve efficiency with custom apps and workflows.",
-      salary: "£45,000 - £80,000"
-    },
-    {
-      icon: <Building className="w-6 h-6 text-[#049DCB]" />,
-      title: "Enterprise Architect",
-      description: "Key roles in designing and implementing IT infrastructure, ensuring scalability and security.",
-      salary: "£60,000 - £100,000"
-    },
-    {
-      icon: <Cloud className="w-6 h-6 text-[#049DCB]" />,
-      title: "Cloud Solutions Architect",
-      description: "Leads cloud strategy and design in organizations, ensuring efficient and secure cloud-based solutions that scale to business needs.",
-      salary: "£65,000 - £120,000"
-    },
-    {
-      icon: <Code className="w-6 h-6 text-[#049DCB]" />,
-      title: "DevOps Engineer",
-      description: "Integrates development and operations, automating software deployment and ensuring smooth, reliable system performance.",
-      salary: "£50,000 - £85,000"
-    },
-    {
-      icon: <Database className="w-6 h-6 text-[#049DCB]" />,
-      title: "ML Operations Engineer",
-      description: "Works in industries ranging from finance to healthcare, focusing on building and deploying AI models to solve complex problems.",
-      salary: "£55,000 - £95,000"
+      description: "Build enterprise Power Apps and automate workflows end to end across Dataverse and SQL.",
+      salary: "£45,000 - £85,000"
     },
     {
       icon: <BarChart2 className="w-6 h-6 text-[#049DCB]" />,
       title: "Power BI Specialist",
-      description: "Creates and manages data visualizations and dashboards, helping businesses make informed, data-driven decisions.",
-      salary: "£40,000 - £70,000"
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-[#049DCB]" />,
-      title: "Cloud Security Engineer",
-      description: "Ensures data protection and compliance in cloud environments, focusing on implementing security protocols and threat mitigation.",
-      salary: "£60,000 - £100,000"
+      description: "Model data, craft DAX, and publish secure analytics for stakeholders at scale.",
+      salary: "£45,000 - £80,000"
     },
     {
       icon: <Terminal className="w-6 h-6 text-[#049DCB]" />,
       title: "Low-Code/No-Code Solutions Consultant",
-      description: "Specializes in delivering custom low-code solutions, improving efficiency and accessibility for non-technical users across various industries.",
-      salary: "£45,000 - £75,000"
+      description: "Lead low-code adoption, build copilots, and integrate apps, flows, and data for business users.",
+      salary: "£50,000 - £90,000"
     }
   ];
 

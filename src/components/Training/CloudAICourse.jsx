@@ -4,51 +4,132 @@ import { Link } from 'react-router-dom';
 
 const CloudAICourse = () => {
   const course = {
-    id: 'cloud-ai',
-    title: 'Cloud Engineering, AI & DevOps',
-    description: 'Master the fundamentals of cloud architecture, artificial intelligence, and DevOps principles. Learn to design, deploy, and manage scalable cloud solutions while implementing AI technologies and streamlining workflows.',
+    id: 'ai-practitioner',
+    title: 'Standex Certified Artificial Intelligence Practitioner (CAIP)',
+    description: 'Apply AI end-to-end: strategy, use-case selection, data readiness, ML and GenAI fundamentals, deployment, governance, security, ethics, and ROI—culminating in a capstone project.',
     image: '/CloudCourse.svg',
-    enrollLink: 'https://buy.stripe.com/cN29CF2Uw5dk30A6op',
+    enrollLink: 'https://buy.stripe.com/bIYaGJeDe0X47gQ5kn',
     duration: '12 weeks (part-time)',
     format: 'Online',
     topics: [
       {
-        title: 'Month 1: Cloud Computing Fundamentals',
+        title: 'Module 1: Foundations of Artificial Intelligence',
         items: [
-          'Understand cloud service models and deployment strategies',
-          'Set up and configure cloud environments',
-          'Implement security best practices for cloud resources',
-          'Master virtualization and containerization concepts'
+          'What AI really is (and what it is not)',
+          'AI vs Machine Learning vs Deep Learning',
+          'Enterprise and real-world AI use cases',
+          'AI maturity models and adoption stages'
         ]
       },
       {
-        title: 'Month 2: AI & Prompt Engineering',
+        title: 'Module 2: Identifying High-Impact AI Use Cases',
         items: [
-          'Develop skills in prompt engineering for generative AI',
-          'Create and deploy AI solutions using Azure AI services',
-          'Understand machine learning workflows and model training',
-          'Build practical AI applications for business use cases'
+          'AI opportunity discovery frameworks',
+          'Business problem framing for AI',
+          'Feasibility and risk assessment',
+          'Prioritising AI initiatives for value and impact'
         ]
       },
       {
-        title: 'Month 3: DevOps & Continuous Integration',
+        title: 'Module 3: Data Strategy and Readiness for AI',
         items: [
-          'Implement CI/CD pipelines for automated software delivery',
-          'Utilize infrastructure as code for consistent deployments',
-          'Master version control and collaborative development workflows',
-          'Learn monitoring and optimization techniques for cloud resources'
+          'Data types used in AI systems',
+          'Data quality, bias, and governance',
+          'Structured vs unstructured data',
+          'Data access, security, and compliance'
+        ]
+      },
+      {
+        title: 'Module 4: Designing AI Systems and Architectures',
+        items: [
+          'AI solution architecture fundamentals',
+          'Model-centric vs platform-centric design',
+          'Build vs buy decisions',
+          'Integrating AI into existing systems'
+        ]
+      },
+      {
+        title: 'Module 5: Machine Learning Concepts for Practitioners',
+        items: [
+          'Supervised and unsupervised learning',
+          'Model training vs inference',
+          'Model evaluation and performance trade-offs',
+          'Explainability and interpretability basics'
+        ]
+      },
+      {
+        title: 'Module 6: Generative AI and Intelligent Assistants',
+        items: [
+          'Large Language Models (LLMs) explained',
+          'Prompt engineering for business workflows',
+          'Knowledge assistants and chatbots',
+          'Managing hallucinations and reliability risks'
+        ]
+      },
+      {
+        title: 'Module 7: Deploying AI Solutions',
+        items: [
+          'AI development lifecycle',
+          'Cloud, on-premise, and hybrid deployments',
+          'MLOps fundamentals',
+          'Monitoring, scaling, and optimisation'
+        ]
+      },
+      {
+        title: 'Module 8: AI Governance, Risk, and Compliance',
+        items: [
+          'AI governance frameworks',
+          'Regulatory considerations (e.g. GDPR)',
+          'Risk classification and control measures',
+          'Human-in-the-loop systems'
+        ]
+      },
+      {
+        title: 'Module 9: Responsible and Ethical AI',
+        items: [
+          'Bias, fairness, and transparency',
+          'Ethical AI design principles',
+          'Trustworthy AI systems',
+          'Managing sensitive and personal data'
+        ]
+      },
+      {
+        title: 'Module 10: AI Security and Protection',
+        items: [
+          'Threats to AI systems',
+          'Data leakage and misuse',
+          'Securing AI APIs and models',
+          'Enterprise AI security best practices'
+        ]
+      },
+      {
+        title: 'Module 11: Measuring AI Value and ROI',
+        items: [
+          'Business KPIs vs model metrics',
+          'Measuring AI performance and impact',
+          'Cost–benefit analysis',
+          'Continuous improvement strategies'
+        ]
+      },
+      {
+        title: 'Module 12: Capstone Project – Applied AI in Practice',
+        items: [
+          'Use-case justification and solution design',
+          'System architecture and governance plan',
+          'Risk controls and compliance considerations',
+          'Value and ROI assessment presentation'
         ]
       }
     ],
     benefits: [
-      'Free $500 Azure Credits for the first 30 students',
-      'Hands-on labs and real-world projects',
-      'UK Work Experience',
-      'Preparation for industry-recognized certifications',
-      'Access to cutting-edge tools and technologies'
+      'Certification: Certified Artificial Intelligence Practitioner (CAIP)',
+      'Applied capstone with enterprise-grade deliverables',
+      'Governance, risk, and compliance baked into every stage',
+      'Hands-on with ML, GenAI, security, and monitoring practices',
+      'Career-focused portfolio to showcase AI solutions'
     ],
-    audience: 'IT professionals, software developers, system administrators, and technology managers looking to upskill in cloud computing, AI implementation, and modern development practices.',
-    tagline: 'Master new skills with our in-depth course offering'
+    audience: 'Professionals and leaders building, governing, or productizing AI solutions who need a practical, end-to-end view from use-case selection to deployment and ROI.',
+    tagline: 'Design, deploy, and govern AI responsibly with enterprise-grade rigor'
   };
 
   return (

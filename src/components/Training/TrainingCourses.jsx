@@ -32,145 +32,22 @@ const TrainingCourses = () => {
 
   const courses = [
     {
-      id: 'cloud-ai',
-      title: 'Cloud Engineering, AI & DevOps',
-      description: 'Master the fundamentals of cloud architecture, artificial intelligence, and DevOps principles. Learn to design, deploy, and manage scalable cloud solutions while implementing AI technologies and streamlining workflows.',
+      id: 'ai-practitioner',
+      title: 'Standex Certified Artificial Intelligence Practitioner',
+      description: 'Design, deploy, and govern AI systems end-to-end: strategy, architecture, ML, generative AI, security, ethics, and applied capstone delivery.',
       image: '/CloudCourse.svg',
-      enrollLink: 'https://buy.stripe.com/cN29CF2Uw5dk30A6op',
+      enrollLink: 'https://buy.stripe.com/bIYaGJeDe0X47gQ5kn',
       duration: '12 weeks (part-time)',
-      format: 'Online',
-      topics: [
-        {
-          title: 'Month 1: Cloud Computing Fundamentals',
-          items: [
-            'Understand cloud service models and deployment strategies',
-            'Set up and configure cloud environments',
-            'Implement security best practices for cloud resources',
-            'Master virtualization and containerization concepts'
-          ]
-        },
-        {
-          title: 'Month 2: AI & Prompt Engineering',
-          items: [
-            'Develop skills in prompt engineering for generative AI',
-            'Create and deploy AI solutions using Azure AI services',
-            'Understand machine learning workflows and model training',
-            'Build practical AI applications for business use cases'
-          ]
-        },
-        {
-          title: 'Month 3: DevOps & Continuous Integration',
-          items: [
-            'Implement CI/CD pipelines for automated software delivery',
-            'Utilize infrastructure as code for consistent deployments',
-            'Master version control and collaborative development workflows',
-            'Learn monitoring and optimization techniques for cloud resources'
-          ]
-        }
-      ],
-      benefits: [
-        'Free $500 Azure Credits for the first 30 students',
-        'Hands-on labs and real-world projects',
-        'UK Work Experience',
-        'Preparation for industry-recognized certifications',
-        'Access to cutting-edge tools and technologies'
-      ],
-      audience: 'IT professionals, software developers, system administrators, and technology managers looking to upskill in cloud computing, AI implementation, and modern development practices.',
-      tagline: 'Master new skills with our in-depth course offering'
+      format: 'Online'
     },
     {
-      id: 'power-platform',
-      title: 'Power Platform: Low Code - No Code',
-      description: 'Discover how to build professional applications without traditional coding. Learn to use Microsoft Power Platform to create efficient solutions using low-code and no-code development approaches.',
+      id: 'power-platform-bi',
+      title: 'Standex Certified Power Platform & Business Intelligence Practitioner',
+      description: 'Build enterprise-ready apps, automate workflows, model data, and deliver Power BI analytics with SQL, Dataverse, and Copilot Studio.',
       image: '/PowerPlatformCourse.svg',
       enrollLink: 'https://buy.stripe.com/bIY1693YAcFMbx66os',
       duration: '12 weeks (part-time)',
-      format: 'Online',
-      topics: [
-        {
-          title: 'Month 1: Power Apps Foundations',
-          items: [
-            'Build custom business applications without coding experience',
-            'Design intuitive user interfaces and responsive layouts',
-            'Connect to data sources and create dynamic forms'
-          ]
-        },
-        {
-          title: 'Month 2: Power Automate Essentials',
-          items: [
-            'Automate repetitive tasks and complex workflows',
-            'Integrate with Microsoft 365 and third-party applications',
-            'Create approval processes and notification systems'
-          ]
-        },
-        {
-          title: 'Month 3: Copilot Studio & Integration',
-          items: [
-            'Design and deploy custom AI chatbots for your organization',
-            'Integrate Copilot capabilities across your Power Platform solutions',
-            'Create end-to-end business solutions combining all three technologies'
-          ]
-        }
-      ],
-      benefits: [
-        'Hands-on projects based on real business scenarios',
-        'Small group coaching from certified Microsoft instructors',
-        'UK Work Experience',
-        'Career advancement in high-demand fields',
-        'Flexible learning schedule for working professionals'
-      ],
-      audience: 'Business professionals, analysts, administrators, and technology enthusiasts looking to enhance productivity and innovation within their organization.',
-      tagline: 'Gain mastery with our well-rounded course program'
-    },
-    {
-      id: 'business-intelligence',
-      title: 'Business Intelligence',
-      description: 'Transform raw data into meaningful insights. Learn to use BI tools to create powerful visualizations, reports, and dashboards that drive informed business decisions.',
-      image: '/BusinessIntelligenceCourse.svg',
-      enrollLink: 'https://buy.stripe.com/bIYaGJeDe0X47gQ5kn',
-      duration: '12 weeks (part-time)',
-      format: 'Online',
-      topics: [
-        {
-          title: 'Month 1: Excel for Data Analysis',
-          items: [
-            'Master advanced data analysis techniques',
-            'Create dynamic pivot tables and dashboards',
-            'Implement complex formulas and functions',
-            'Develop efficient data cleaning and preparation methods',
-            'Build professional charts and visualization tools'
-          ]
-        },
-        {
-          title: 'Month 2: SQL Fundamentals',
-          items: [
-            'Write effective data queries for information retrieval',
-            'Perform data aggregation and analysis',
-            'Implement data manipulation techniques',
-            'Understand database management principles',
-            'Master table joins and relationship mapping'
-          ]
-        },
-        {
-          title: 'Month 3: Power BI Development',
-          items: [
-            'Design comprehensive data models',
-            'Create interactive dashboards and reports',
-            'Implement real-time reporting solutions',
-            'Master data transformation and ETL processes',
-            'Develop advanced visualizations for complex datasets'
-          ]
-        }
-      ],
-      benefits: [
-        'Work with real datasets across multiple industries',
-        'Build a portfolio of business intelligence projects',
-        'UK Work Experience',
-        'Learn industry-standard tools and methodologies',
-        'Develop skills for high-demand BI positions'
-      ],
-      audience: 'Business analysts, data professionals, managers, and decision-makers looking to enhance their data analysis capabilities and deliver actionable insights within their organizations.',
-      tagline: 'Fuel your professional growth with our all-encompassing course'
+      format: 'Online'
     }
   ];
 
