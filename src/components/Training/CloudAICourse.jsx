@@ -7,7 +7,7 @@ const CloudAICourse = () => {
     id: 'ai-practitioner',
     title: 'Standex Certified Artificial Intelligence Practitioner (CAIP)',
     description: 'Apply AI end-to-end: strategy, use-case selection, data readiness, ML and GenAI fundamentals, deployment, governance, security, ethics, and ROI—culminating in a capstone project.',
-    image: '/CloudCourse.svg',
+    image: '/ArtificialIntelligence.png',
     enrollLink: 'https://buy.stripe.com/bIYaGJeDe0X47gQ5kn',
     duration: '12 weeks (part-time)',
     format: 'Online',
