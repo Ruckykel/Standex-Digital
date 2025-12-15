@@ -108,14 +108,14 @@ const ContactLocation = () => {
             <div className="grid grid-cols-1 gap-4 mt-8 ">
               <a 
                 
-                href="mailto:admin@standexdigital.tech" 
+                href="support@standexdigital.com" 
                 id="contact-email"
                 className="flex items-center bg-gray-700 hover:bg-[#049DCB]/20 p-4 rounded-lg transition-colors group"
               >
                 <div className="bg-[#049DCB]/20 p-2 rounded-full mr-3 group-hover:bg-[#049DCB]/30 transition-colors">
                   <Mail className="h-5 w-5 text-[#049DCB]" />
                 </div>
-                <span className="text-gray-300 group-hover:text-white transition-colors">admin@standexdigital.tech</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors">support@standexdigital.com</span>
               </a>
               
               
