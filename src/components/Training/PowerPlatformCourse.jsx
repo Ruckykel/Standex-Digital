@@ -13,84 +13,29 @@ const PowerPlatformCourse = () => {
     format: 'Online',
     topics: [
       {
-        title: 'Module 1 – Power Platform Foundations',
+        title: 'Module 1: Power Platform, Data & SQL Foundations',
         items: [
-          'Microsoft ecosystem: M365, Azure, Power Platform',
-          'Power Apps, Power Automate, Power BI, Copilot Studio overview',
-          'Dataverse basics, licensing, and connectors',
-          'ALM basics, environments, and DLP policies'
+          'Power Platform ecosystem: M365, Azure, Power Platform; roles of Power Apps, Power Automate, Power BI, Copilot Studio; architecture, licensing, and environments',
+          'General data concepts: transactional vs analytical, structured/semi/unstructured, OLTP vs OLAP, data quality/integrity/governance, normalisation vs denormalisation (conceptual)',
+          'SQL fundamentals: relational schemas, PK/FK/constraints; SELECT, WHERE, JOIN, GROUP BY; subqueries and CTEs; window functions; indexing and performance basics; writing readable SQL',
+          'Data storage in Power Platform context: Dataverse fundamentals and table design; when to use Dataverse vs SQL vs SharePoint; connecting SQL to Power Apps and Power BI; security/access/compliance basics'
         ]
       },
       {
-        title: 'Module 2 – SQL & Data Engineering Essentials',
+        title: 'Module 2: Power Apps & Power Automate – Data-Driven Applications',
         items: [
-          'Relational concepts, keys, and relationships',
-          'SQL from SELECT to window functions',
-          'Normalised vs denormalised schemas',
-          'Connecting SQL to Power Apps and Power BI'
+          'Power Apps (canvas & model-driven): design and architecture; screens, forms, galleries, components; Power FX deep dive (Patch, Collect, LookUp, Filter, ForAll); delegation and data limits; security; offline/responsive design and publishing',
+          'Power Automate: automated/instant/scheduled/business process flows; using SQL and Dataverse as triggers/actions; approval patterns; error handling with scopes, retries, exception patterns; Power Automate Desktop for legacy systems',
+          'Data & integration patterns: app-to-flow and flow-to-data patterns; validations, transactions, concurrency; performance tuning with large datasets; governance, DLP policies, and ALM'
         ]
       },
       {
-        title: 'Module 3 – Data Modelling & Architecture',
+        title: 'Module 3: Power BI, Analytics & Business Intelligence',
         items: [
-          'Star vs snowflake schemas; fact vs dimension tables',
-          'Optimised Dataverse tables and governance',
-          'Power BI modelling: relationships and direction',
-          'Dataflows vs Dataverse vs SQL'
-        ]
-      },
-      {
-        title: 'Module 4 – Power Apps (Canvas & Model-Driven)',
-        items: [
-          'Building Canvas apps: screens, forms, galleries',
-          'PowerFX deep dive: Patch, Collect, LookUp, Filter',
-          'Model-driven structure and security roles',
-          'Offline mode, responsive design, deployment and sharing'
-        ]
-      },
-      {
-        title: 'Module 5 – Power Automate (Cloud + Desktop)',
-        items: [
-          'Automated, Instant, Scheduled, and Business Process flows',
-          'Approvals frameworks, scopes, retries, and error handling',
-          'Connecting to SQL, Dataverse, SharePoint',
-          'Power Automate Desktop basics for UI automation'
-        ]
-      },
-      {
-        title: 'Module 6 – Power BI (End-to-End Analytics)',
-        items: [
-          'Import vs DirectQuery; Power Query ETL best practices',
-          'DAX fundamentals and advanced time intelligence',
-          'Report design, UX, accessibility',
-          'Publishing, workspaces, apps, security, and RLS'
-        ]
-      },
-      {
-        title: 'Module 7 – Copilot Studio (AI Automation & Agents)',
-        items: [
-          'Building copilots, topics, entities, and triggers',
-          'Integrations with Power Apps and Flows',
-          'SQL/Dataverse connectivity and advanced prompts',
-          'Deployment to Teams/web and AI safety monitoring'
-        ]
-      },
-      {
-        title: 'Module 8 – Integration & Solution Architecture',
-        items: [
-          'Full enterprise solution design and documentation',
-          'Performance optimisation and governance',
-          'Security, compliance, and deployment strategies',
-          'Connecting apps, flows, data, BI, and copilots'
-        ]
-      },
-      {
-        title: 'Module 9 – Capstone Project (Certification Requirement)',
-        items: [
-          'SQL backend plus Power App (canvas/model-driven)',
-          'Automated workflow with Power Automate',
-          'Power BI dashboards with proper data models',
-          'Copilot integrated with business logic and presentation'
+          'BI fundamentals: KPIs, metrics, dimensions, measures; reporting vs dashboards vs analytics; designing data models for decision-making',
+          'Power BI data modelling & SQL for analytics: star schema and dimensional modelling; fact/dimension tables; import vs DirectQuery vs composite; using SQL views for analytics; model performance optimisation',
+          'Power BI development & DAX: Power Query ETL best practices; DAX fundamentals and evaluation context; time intelligence patterns; performance optimisation',
+          'Power Platform BI integration & capstone: Dataverse → Power BI integration; embedding Power BI in Power Apps & Teams; Row-Level Security (RLS); end-to-end capstone (SQL + Dataverse backend, Power App front-end, Power Automate workflows, Power BI analytics, documentation and presentation)'
         ]
       }
     ],

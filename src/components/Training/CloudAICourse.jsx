@@ -13,111 +13,30 @@ const CloudAICourse = () => {
     format: 'Online',
     topics: [
       {
-        title: 'Module 1: Foundations of Artificial Intelligence',
+        title: 'Module 1: Machine Learning & Generative AI (Foundations to Application)',
         items: [
-          'What AI really is (and what it is not)',
-          'AI vs Machine Learning vs Deep Learning',
-          'Enterprise and real-world AI use cases',
-          'AI maturity models and adoption stages'
+          'Foundations of AI: what AI is (and is not), AI vs ML vs DL, enterprise use cases, AI maturity models',
+          'Machine learning concepts: supervised vs unsupervised, training vs inference, evaluation trade-offs, explainability basics',
+          'Generative AI and assistants: LLMs explained, prompt engineering for workflows, knowledge assistants/chatbots, managing hallucinations and reliability risks',
+          'Measuring AI performance and value: business KPIs vs model metrics, effectiveness and outcomes, cost–benefit analysis, continuous improvement'
         ]
       },
       {
-        title: 'Module 2: Identifying High-Impact AI Use Cases',
+        title: 'Module 2: AI Systems, Architectures, and Agents',
         items: [
-          'AI opportunity discovery frameworks',
-          'Business problem framing for AI',
-          'Feasibility and risk assessment',
-          'Prioritising AI initiatives for value and impact'
+          'Identifying high-impact AI use cases: discovery frameworks, problem framing, feasibility and risk, prioritising initiatives for value',
+          'Data strategy and readiness: structured vs unstructured data, quality/bias/governance, access/security/compliance',
+          'Designing AI systems: architecture fundamentals, model-centric vs platform-centric, build vs buy, integrating into existing systems',
+          'AI systems, agents, and deployment: AI development lifecycle, agents and autonomous workflows, cloud/on-prem/hybrid, MLOps fundamentals, monitoring and optimisation'
         ]
       },
       {
-        title: 'Module 3: Data Strategy and Readiness for AI',
+        title: 'Module 3: AI Governance, Ethics, and Enterprise Risk',
         items: [
-          'Data types used in AI systems',
-          'Data quality, bias, and governance',
-          'Structured vs unstructured data',
-          'Data access, security, and compliance'
-        ]
-      },
-      {
-        title: 'Module 4: Designing AI Systems and Architectures',
-        items: [
-          'AI solution architecture fundamentals',
-          'Model-centric vs platform-centric design',
-          'Build vs buy decisions',
-          'Integrating AI into existing systems'
-        ]
-      },
-      {
-        title: 'Module 5: Machine Learning Concepts for Practitioners',
-        items: [
-          'Supervised and unsupervised learning',
-          'Model training vs inference',
-          'Model evaluation and performance trade-offs',
-          'Explainability and interpretability basics'
-        ]
-      },
-      {
-        title: 'Module 6: Generative AI and Intelligent Assistants',
-        items: [
-          'Large Language Models (LLMs) explained',
-          'Prompt engineering for business workflows',
-          'Knowledge assistants and chatbots',
-          'Managing hallucinations and reliability risks'
-        ]
-      },
-      {
-        title: 'Module 7: Deploying AI Solutions',
-        items: [
-          'AI development lifecycle',
-          'Cloud, on-premise, and hybrid deployments',
-          'MLOps fundamentals',
-          'Monitoring, scaling, and optimisation'
-        ]
-      },
-      {
-        title: 'Module 8: AI Governance, Risk, and Compliance',
-        items: [
-          'AI governance frameworks',
-          'Regulatory considerations (e.g. GDPR)',
-          'Risk classification and control measures',
-          'Human-in-the-loop systems'
-        ]
-      },
-      {
-        title: 'Module 9: Responsible and Ethical AI',
-        items: [
-          'Bias, fairness, and transparency',
-          'Ethical AI design principles',
-          'Trustworthy AI systems',
-          'Managing sensitive and personal data'
-        ]
-      },
-      {
-        title: 'Module 10: AI Security and Protection',
-        items: [
-          'Threats to AI systems',
-          'Data leakage and misuse',
-          'Securing AI APIs and models',
-          'Enterprise AI security best practices'
-        ]
-      },
-      {
-        title: 'Module 11: Measuring AI Value and ROI',
-        items: [
-          'Business KPIs vs model metrics',
-          'Measuring AI performance and impact',
-          'Cost–benefit analysis',
-          'Continuous improvement strategies'
-        ]
-      },
-      {
-        title: 'Module 12: Capstone Project – Applied AI in Practice',
-        items: [
-          'Use-case justification and solution design',
-          'System architecture and governance plan',
-          'Risk controls and compliance considerations',
-          'Value and ROI assessment presentation'
+          'AI governance and compliance: governance frameworks, regulatory considerations (e.g. GDPR), risk classification and controls, human-in-the-loop systems',
+          'Responsible and ethical AI: bias, fairness, transparency, ethical design principles, trustworthy systems, managing sensitive data',
+          'AI security and protection: threats to AI systems, data leakage and misuse, securing APIs/models, enterprise security best practices',
+          'Capstone: applied AI in practice—use-case justification and solution design, architecture and governance plan, risk controls and compliance, value and ROI assessment'
         ]
       }
     ],
