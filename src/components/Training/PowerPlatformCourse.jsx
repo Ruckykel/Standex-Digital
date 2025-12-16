@@ -184,7 +184,21 @@ const PowerPlatformCourse = () => {
           {/* Contact */}
           <div className="text-center text-gray-400">
             <p className="text-lg mb-2">Have questions? Contact us at:</p>
-            <p className="text-[#2EC743] text-lg font-semibold">support@standexdigital.com | +447918262629</p>
+            <p className="text-[#2EC743] text-lg font-semibold space-x-2">
+              <a 
+                href="mailto:support@standexdigital.com" 
+                className="hover:underline"
+              >
+                support@standexdigital.com
+              </a>
+              <span>|</span>
+              <a 
+                href="tel:+447918262629" 
+                className="hover:underline"
+              >
+                +44 7918 262629
+              </a>
+            </p>
           </div>
         </div>
       </div>
