@@ -6,7 +6,6 @@ import IntelligentCloudSolutions from './Services/IntelligentCloudSolutions'
 import Navbar from './Navbar'
 import ServicesDiscovery from './Services/ServicesDiscovery'
 import ServicesHeader from './Services/ServicesHeader'
-import TechElevate from './Services/TechElevate'
 import WebAndAppDevelopment from './Services/WebAndAppDevelopment'
 
 
@@ -20,7 +19,6 @@ const Services = () => {
       <DigitalMarketing/>
       <AIArchitectureAndDevelopment />
       <ECommerceSolutions/>
-      <TechElevate/>
       <ServicesDiscovery/>
       <Footer />
     </div>
