@@ -188,7 +188,7 @@ const BusinessIntelligenceCourse = () => {
           {/* Contact */}
           <div className="text-center text-gray-400">
             <p className="text-lg mb-2">Have questions? Contact us at:</p>
-            <p className="text-[#2EC743] text-lg font-semibold">techelevate@standexdigital.tech | +447918262629</p>
+            <p className="text-[#2EC743] text-lg font-semibold">support@standexdigital.com | +447918262629</p>
           </div>
         </div>
       </div>
