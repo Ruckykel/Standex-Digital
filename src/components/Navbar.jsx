@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, ShoppingCart } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,7 +44,6 @@ const Navbar = () => {
         },
         { title: 'Services', href: '/Services' },
         { title: 'Training', href: '/Training' },
-        { title: 'Tech Elevate', href: 'https://techelevate.shop', icon: 'cart', external: true },
     ];
 
     return (
@@ -91,22 +90,12 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 ) : (
-                                    item.external ? (
-                                        <span
-                                            aria-disabled="true"
-                                            className={`${item.external ? 'bg-gray-800 text-white border border-gray-700 opacity-90' : 'text-gray-200'} px-3 py-2 rounded-md text-base font-medium flex items-center gap-1 cursor-not-allowed`}
-                                        >
-                                            {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
-                                            {item.title}
-                                        </span>
-                                    ) : (
-                                        <a
-                                            href={item.href}
-                                            className="text-gray-200 hover:text-[#2EC743] px-3 py-2 rounded-md text-base font-medium"
-                                        >
-                                            {item.title}
-                                        </a>
-                                    )
+                                    <a
+                                        href={item.href}
+                                        className="text-gray-200 hover:text-[#2EC743] px-3 py-2 rounded-md text-base font-medium"
+                                    >
+                                        {item.title}
+                                    </a>
                                 )}
                             </div>
                         ))}
@@ -160,22 +149,12 @@ const Navbar = () => {
                                     )}
                                 </div>
                             ) : (
-                                item.external ? (
-                                    <span
-                                        aria-disabled="true"
-                                        className={`${item.external ? 'bg-gray-800 text-white border border-gray-700 opacity-90' : 'text-gray-200'} px-4 py-2 text-base font-medium flex items-center gap-2 cursor-not-allowed`}
-                                    >
-                                        {item.icon === 'cart' && <ShoppingCart className="h-4 w-4" />}
-                                        {item.title}
-                                    </span>
-                                ) : (
-                                    <a
-                                        href={item.href}
-                                        className="text-gray-200 hover:text-[#2EC743] px-4 py-2 text-base font-medium"
-                                    >
-                                        {item.title}
-                                    </a>
-                                )
+                                <a
+                                    href={item.href}
+                                    className="text-gray-200 hover:text-[#2EC743] px-4 py-2 text-base font-medium"
+                                >
+                                    {item.title}
+                                </a>
                             )}
                         </div>
                     ))}
