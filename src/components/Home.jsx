@@ -2,6 +2,7 @@ import Footer from './Footer'
 import HomeAbout from './Home/HomeAbout'
 import HomeHero from './Home/HomeHero'
 import HomeServices from './Home/HomeServices'
+import StandexAISection from './Home/StandexAISection'
 import Navbar from './Navbar'
 import TechSolutions from './Home/TechSolutions'
 import Testimonials from './Testimonials'
@@ -14,6 +15,7 @@ const Home = () => {
       <HomeHero />
       <HomeAbout />
       <HomeServices />
+      <StandexAISection />
       <TechSolutions />
       <WhyChooseUs />
       <Testimonials />
